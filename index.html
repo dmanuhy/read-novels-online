@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="./assets/css/layout.css" rel="stylesheet">
+
+    <title>Web Page</title>
+</head>
+
+<body>
+    <div class="home-header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+            <div class="container">
+                <img class="navbar-brand" src="assets/image/logo.webp" />
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav d-flex flex-lg-row flex-column justify-content-between my-2">
+                        <div class="left-menu d-flex flex-lg-row flex-column align-items-lg-center mb-lg-0 mb-2">
+                            <div class="dropdown text-white genre mb-lg-0 mb-2">
+                                <a class="dropdown-hover text-decoration-none text-white dropdown-toggle" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                    <span class="">Thể Loại</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <ul class="ul-menu">
+                                                <li><a class="" href="#">Bách Hợp</a></li>
+                                                <li><a class="" href="#">Cổ Đại</a></li>
+                                                <li><a class="" href="#">Cung Đấu</a></li>
+                                                <li><a class="" href="#">Dị Năng</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-3">
+                                            <ul class="ul-menu">
+                                                <li><a class="" href="#">Đoản Văn</a></li>
+                                                <li><a class="" href="#">Đam Mỹ</a></li>
+                                                <li><a class="" href="#">Huyền Huyễn</a></li>
+                                                <li><a class="" href="#">Kiếm Hiệp</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-3">
+                                            <ul class="ul-menu">
+                                                <li><a class="" href="#">Lịch Sử</a></li>
+                                                <li><a class="" href="#">Light Novel</a></li>
+                                                <li><a class="" href="#">Mạt Thế</a></li>
+                                                <li><a class="" href="#">Hài Hước</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-3">
+                                            <ul class="ul-menu">
+                                                <li><a class="" href="#">Nữ Cường</a></li>
+                                                <li><a class="" href="#">Ngược</a></li>
+                                                <li><a class="" href="#">Truyện Teen</a></li>
+                                                <li><a class="" href="#">Trọng Sinh</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown text-white option mb-lg-0 mb-2">
+                                <a class="dropdown-hover text-decoration-none text-white dropdown-toggle" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="">Tùy Chỉnh</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <ul class="">
+                                                <li><a class="" href="#">Action</a></li>
+                                                <li><a class="" href="#">Action</a></li>
+                                                <li><a class="" href="#">Action</a></li>
+                                                <li><a class="" href="#">Action</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-menu d-flex flex-lg-row align-items-lg-center flex-column mb-lg-0 mb-2">
+                            <input type="text" class="mx-1 mb-lg-0 mb-2 ps-3 border rounded-1 search"
+                                placeholder="Tìm truyện ..." />
+                            <div class=" login-btn mb-lg-0 mb-2">
+                                <a class="text-decoration-none text-white dropdown-hover">Đăng nhập</a>
+                            </div>
+                            <div class="text-white logout-btn mb-lg-0 mb-2">
+                                <a class="text-decoration-none text-white dropdown-hover">Đăng ký</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+    </div>
+
+    <div class="container header-introduction d-flex align-items-center">
+        Đọc truyện online, đọc truyện chữ, truyện full, truyện hay. Tổng hợp đầy đủ và cập nhật liên tục.
+    </div>
+
+    <div class="home-body py-4">
+        <div class="container home-container">
+            <div class="home-section row g-3 text-center mb-5">
+                <div class="title text-start text-uppercase col-12">Truyện HOT</div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="novel position-relative">
+                        <img class="novel-image img-fluid" src="./assets/image/yeu-tham-tieng-vong.webp"
+                            class="card-img-top" alt="...">
+                        <div class="novel-name py-1 text-center">
+                            <span>Yêu Thầm Tiếng Vọng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-section row g-3 text-center mb-4">
+                <div class="text-start col-12 col-lg-8">
+                    <div class="title text-uppercase">Truyện Mới Cập Nhật</div>
+                    <div class="new-novel row">
+                        <div class="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
+                        <div class="d-none d-lg-block new-novel-genre col-3">Tình Cảm, Hài Hước</div>
+                        <div class="new-novel-chapter col-3 col-lg-2">Chương 20</div>
+                        <div class="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
+                    </div>
+                    <div class="new-novel row">
+                        <div class="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
+                        <div class="d-none d-lg-block new-novel-genre col-3">Tình Cảm, Hài Hước</div>
+                        <div class="new-novel-chapter col-3 col-lg-2">Chương 19</div>
+                        <div class="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
+                    </div>
+                    <div class="new-novel row">
+                        <div class="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
+                        <div class="d-none d-lg-block new-novel-genre col-3">Tình Cảm, Hài Hước</div>
+                        <div class="new-novel-chapter col-3 col-lg-2">Chương 18</div>
+                        <div class="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
+                    </div>
+                    <div class="new-novel row">
+                        <div class="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
+                        <div class="d-none d-lg-block new-novel-genre col-3">Tình Cảm, Hài Hước</div>
+                        <div class="new-novel-chapter col-3 col-lg-2">Chương 17</div>
+                        <div class="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
+                    </div>
+                    <div class="new-novel row">
+                        <div class="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
+                        <div class="d-none d-lg-block new-novel-genre col-3">Tình Cảm, Hài Hước</div>
+                        <div class="new-novel-chapter col-3 col-lg-2">Chương 16</div>
+                        <div class="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
+                    </div>
+                    <div class="new-novel row">
+                        <div class="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
+                        <div class="d-none d-lg-block new-novel-genre col-3">Tình Cảm, Hài Hước</div>
+                        <div class="new-novel-chapter col-3 col-lg-2">Chương 15</div>
+                        <div class="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
+                    </div>
+                    <div class="new-novel row">
+                        <div class="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
+                        <div class="d-none d-lg-block new-novel-genre col-3">Tình Cảm, Hài Hước</div>
+                        <div class="new-novel-chapter col-3 col-lg-2">Chương 15</div>
+                        <div class="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
+                    </div>
+                    <div class="new-novel row">
+                        <div class="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
+                        <div class="d-none d-lg-block new-novel-genre col-3">Tình Cảm, Hài Hước</div>
+                        <div class="new-novel-chapter col-3 col-lg-2">Chương 15</div>
+                        <div class="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
+                    </div>
+                    <div class="new-novel row">
+                        <div class="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
+                        <div class="d-none d-lg-block new-novel-genre col-3">Tình Cảm, Hài Hước</div>
+                        <div class="new-novel-chapter col-3 col-lg-2">Chương 15</div>
+                        <div class="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
+                    </div>
+                    <div class="new-novel row">
+                        <div class="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
+                        <div class="d-none d-lg-block new-novel-genre col-3">Tình Cảm, Hài Hước</div>
+                        <div class="new-novel-chapter col-3 col-lg-2">Chương 15</div>
+                        <div class="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 ps-3 d-none d-lg-block">
+                    <div class="novel-genres">
+                        <div class="title text-uppercase">Thể Loại Truyện</div>
+                        <div class="genre-list text-start row px-4 g-2">
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Bách Hợp</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Cổ Đại</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Dị Năng</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Light Novel</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Ngôn Tình</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Quân Sự</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Lịch Sử</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Thám Hiểm</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Hài Hước</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Đoản Văn</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Kiếm Hiệp</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Truyện Teen</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Đông Phương</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Truyện Teen</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Xuyên Không</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Võng Du</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Điền Văn</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Nữ Cường</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Cung Đấu</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Ngược</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Đam Mỹ</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Sủng</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Trọng Sinh</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Huyền Huyễn</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Mạt Thế</div>
+                            </div>
+                            <div class="genre-item col-6">
+                                <div class="genre-name">Khác</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row d-flex justify-content-between text-white">
+                <div class="col-6 p-5 text-center">
+                    <div>@Copyright 2023</div>
+                </div>
+                <div class="col-6 p-5 text-center">
+                    <div>
+                        <span>More Information</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
