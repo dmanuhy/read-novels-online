@@ -97,26 +97,6 @@ body{
 .new-novel .new-novel-name{
     font-weight: 600;
 }
-.home-section .novel-genres{
-    border: 2px solid #d9e1e4;
-    background-color: #ecf0f1;
-}
-
-.home-section .novel-genres .title{
-    border-bottom: 4px solid #e7e7e7;
-}
-
-.home-section .novel-genres .genre-list{
-    padding: 10px 0;
-}
-
-.home-section .novel-genres .genre-list .genre-item{
-    padding-left: 40px;
-}
-.home-section .novel-genres .genre-list .genre-item:hover{
-    cursor: pointer;
-    background-color: #d2d2d2;
-}
 
 .footer{
     margin-bottom: 0;
