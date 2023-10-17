@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, Header, Footer } from "./components/index"
 import './assets/css/layout.css'
-import './assets/css/novel-genres.css'
+
 const App = () => {
   return (
     <>

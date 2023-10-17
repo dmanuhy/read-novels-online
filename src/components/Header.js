@@ -1,4 +1,5 @@
 import logo from "../assets/image/logo.webp"
+import "../assets/css/header.scss"
 
 const Header = () => {
     return (
@@ -92,6 +93,9 @@ const Header = () => {
                     </div>
                 </nav >
             </div >
+            <div className="header-introduction container">
+                <span>Đọc truyện online, đọc truyện chữ, truyện full, truyện hay. Tổng hợp đầy đủ và cập nhật liên tục.</span>
+            </div>
         </>
     )
 }

@@ -1,5 +1,6 @@
 import image from '../assets/image/yeu-tham-tieng-vong.webp'
 import GenreList from './GenreList';
+import "../assets/css/home.scss"
 
 const Home = () => {
     return (
@@ -10,8 +11,7 @@ const Home = () => {
                         <div className="title text-start text-uppercase col-12">Truyện HOT</div>
                         <div className="col-6 col-sm-4 col-md-3 col-lg-2">
                             <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
+                                <img className="card-img-top novel-image img-fluid" src={image} alt="..." />
                                 <div className="novel-name py-1 text-center">
                                     <span>Yêu Thầm Tiếng Vọng</span>
                                 </div>

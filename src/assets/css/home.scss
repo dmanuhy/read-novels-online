@@ -1,0 +1,58 @@
+.home-body {
+    background-color: #f4f4f4;
+    background-image: linear-gradient(#d2d2d2, #f4f4f4);
+
+    .home-container {
+        .home-section {
+            .title {
+                font-size    : 20px;
+                border-bottom: 1px solid #000;
+            }
+
+            .novel {
+                display        : flex;
+                justify-content: center;
+
+                .novel-image {
+                    width     : 100%;
+                    box-shadow: 0 1px 2px #B5B5B5;
+                }
+
+                .novel-name {
+                    position        : absolute;
+                    display         : block;
+                    bottom          : 0;
+                    width           : 100%;
+                    color           : #f4f4f4;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    text-shadow     : 1px 2px 2px #000;
+                    font-size       : 14px;
+                }
+            }
+
+            .new-novel {
+                padding      : 10px 0;
+                border-bottom: 1px dashed #ccc;
+
+                .new-novel-name,
+                .new-novel-genre,
+                .new-novel-chapter,
+                .updated-time {
+                    white-space  : nowrap;
+                    overflow     : hidden;
+                    text-overflow: ellipsis;
+                    border-right : 1px dashed #ccc;
+                }
+
+                .new-novel-chapter {
+                    font-weight: 600;
+                    color      : #31708f;
+                }
+
+                .new-novel .new-novel-name {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

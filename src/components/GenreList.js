@@ -1,3 +1,4 @@
+import '../assets/css/novel-genres.scss'
 
 const GenreList = () => {
     return (
