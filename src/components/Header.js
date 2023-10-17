@@ -1,6 +1,7 @@
 import logo from "../assets/image/logo.webp"
 import "../assets/css/header.scss"
-
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 const Header = () => {
     return (
         <>
@@ -14,14 +15,14 @@ const Header = () => {
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div className="navbar-nav d-flex flex-lg-row flex-column justify-content-between my-2">
+                            <div className="navbar-nav d-flex flex-lg-row flex-column justify-content-between">
                                 <div className="left-menu d-flex flex-lg-row flex-column align-items-lg-center mb-lg-0 mb-2">
-                                    <div className="dropdown text-white genre my-lg-0 my-2">
-                                        <a className="dropdown-hover text-decoration-none text-white dropdown-toggle"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                    <Dropdown className="dropdown text-white genre my-lg-0 my-2">
+                                        <Dropdown.Toggle className="dropdown-hover">
                                             <span className="">Thể Loại</span>
-                                        </a>
-                                        <div className="dropdown-menu">
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu className="dropdown-menu">
                                             <div className="row">
                                                 <div className="col-3">
                                                     <ul className="ul-menu">
@@ -56,27 +57,51 @@ const Header = () => {
                                                     </ul>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
 
-                                    <div className="dropdown text-white option my-lg-0 my-2">
-                                        <a className="dropdown-hover text-decoration-none text-white dropdown-toggle"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <Dropdown className="dropdown text-white genre my-lg-0 my-2">
+                                        <Dropdown.Toggle className="dropdown-hover">
                                             <span className="">Tùy Chỉnh</span>
-                                        </a>
-                                        <div className="dropdown-menu">
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu >
                                             <div className="row">
-                                                <div className="col-6">
-                                                    <ul className="">
-                                                        <li><a className="" href="#">Action</a></li>
-                                                        <li><a className="" href="#">Action</a></li>
-                                                        <li><a className="" href="#">Action</a></li>
-                                                        <li><a className="" href="#">Action</a></li>
+                                                <div className="col-3">
+                                                    <ul className="ul-menu">
+                                                        <li><a className="" href="#">Bách Hợp</a></li>
+                                                        <li><a className="" href="#">Cổ Đại</a></li>
+                                                        <li><a className="" href="#">Cung Đấu</a></li>
+                                                        <li><a className="" href="#">Dị Năng</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div className="col-3">
+                                                    <ul className="ul-menu">
+                                                        <li><a className="" href="#">Đoản Văn</a></li>
+                                                        <li><a className="" href="#">Đam Mỹ</a></li>
+                                                        <li><a className="" href="#">Huyền Huyễn</a></li>
+                                                        <li><a className="" href="#">Kiếm Hiệp</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div className="col-3">
+                                                    <ul className="ul-menu">
+                                                        <li><a className="" href="#">Lịch Sử</a></li>
+                                                        <li><a className="" href="#">Light Novel</a></li>
+                                                        <li><a className="" href="#">Mạt Thế</a></li>
+                                                        <li><a className="" href="#">Hài Hước</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div className="col-3">
+                                                    <ul className="ul-menu">
+                                                        <li><a className="" href="#">Nữ Cường</a></li>
+                                                        <li><a className="" href="#">Ngược</a></li>
+                                                        <li><a className="" href="#">Truyện Teen</a></li>
+                                                        <li><a className="" href="#">Trọng Sinh</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
                                 </div>
                                 <div className="right-menu d-flex flex-lg-row align-items-lg-center flex-column mb-lg-0 mb-2">
                                     <input type="text" className="mx-1 mb-lg-0 mb-2 ps-3 border rounded-1 search"
@@ -93,6 +118,7 @@ const Header = () => {
                     </div>
                 </nav >
             </div >
+
             <div className="header-introduction container">
                 <span>Đọc truyện online, đọc truyện chữ, truyện full, truyện hay. Tổng hợp đầy đủ và cập nhật liên tục.</span>
             </div>

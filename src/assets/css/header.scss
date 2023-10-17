@@ -5,41 +5,65 @@
         .navbar-nav {
             width: 100%;
 
-            .dropdown-hover {
-                padding: 13px;
-
-                .dropdown-menu {
-                    background-color       : #31708f;
-                    margin-top             : 10px;
-                    border-top-left-radius : 0%;
-                    border-top-right-radius: 0%;
-                    width                  : 500px;
-                    padding                : 5px;
-
-                    .ul-menu {
-                        padding-inline-start: 0;
+            .left-menu {
+                .dropdown {
+                    .dropdown-toggle {
+                        background-color: #14425d;
+                        border          : none;
+                        border-radius   : 0%;
+                        margin          : 0;
                     }
 
-                    .ul-menu li:hover {
-                        background-color: #14425d;
+                    .dropdown-hover {
+                        padding: 13px;
+                    }
 
-                        li {
-                            padding   : 2px 5px 2px 5px;
-                            text-align: start;
-                            list-style: none;
+                    .dropdown-hover:hover {
+                        background-color: #31708f;
+                    }
 
-                            a {
-                                text-decoration: none;
-                                color          : white;
+                    .dropdown-menu {
+                        background-color       : #31708f;
+                        border-top-left-radius : 0%;
+                        border-top-right-radius: 0%;
+                        width                  : 600px;
+                        padding                : 10px 10px 5px 10px;
+
+                        .ul-menu {
+                            padding-inline-start: 0;
+
+                            li {
+                                padding   : 4px 4px 4px 4px;
+                                text-align: start;
+                                list-style: none !important;
+
+                                a {
+                                    margin-left    : 10px;
+                                    text-decoration: none;
+                                    color          : white;
+                                }
+                            }
+
+                            li:hover {
+                                background-color: #14425d;
+
+
                             }
                         }
+
+
                     }
                 }
             }
 
-            .dropdown-hover:hover,
-            .dropdown-hover:focus {
-                background-color: #31708f;
+            .right-menu {
+                .dropdown-hover {
+                    padding: 13px;
+                }
+
+                .dropdown-hover:hover {
+                    background-color: #31708f;
+                }
             }
         }
     }
