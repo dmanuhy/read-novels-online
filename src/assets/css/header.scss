@@ -1,7 +1,13 @@
 .home-header {
     background-color: #14425d;
 
-    .navbar-expand-lg {
+    .navbar {
+        padding: 2px;
+
+        .navbar-brand {
+            padding: 0;
+        }
+
         .navbar-nav {
             width: 100%;
 
@@ -15,54 +21,53 @@
                     }
 
                     .dropdown-hover {
-                        padding: 13px;
+                        padding: 14px;
                     }
 
-                    .dropdown-hover:hover {
+                    .dropdown-hover:hover,
+                    .dropdown-hover:active {
                         background-color: #31708f;
                     }
 
                     .dropdown-menu {
+                        margin-top             : -1px;
+                        margin-left            : -1px;
                         background-color       : #31708f;
                         border-top-left-radius : 0%;
                         border-top-right-radius: 0%;
                         width                  : 600px;
-                        padding                : 10px 10px 5px 10px;
+                        padding                : 10px 10px 10px 10px;
 
-                        .ul-menu {
-                            padding-inline-start: 0;
-
-                            li {
-                                padding   : 4px 4px 4px 4px;
-                                text-align: start;
-                                list-style: none !important;
+                        .genre-list {
+                            .genre-item {
+                                padding: 5px;
 
                                 a {
-                                    margin-left    : 10px;
-                                    text-decoration: none;
-                                    color          : white;
+                                    margin-left: 10px;
                                 }
                             }
 
-                            li:hover {
+                            .genre-item:hover {
                                 background-color: #14425d;
-
-
                             }
                         }
-
-
                     }
                 }
             }
 
             .right-menu {
-                .dropdown-hover {
-                    padding: 13px;
-                }
 
-                .dropdown-hover:hover {
-                    background-color: #31708f;
+                .login-btn,
+                .register-btn {
+                    padding: 14px 0 14px 0;
+
+                    .dropdown-hover {
+                        padding: 14px;
+                    }
+
+                    .dropdown-hover:hover {
+                        background-color: #31708f;
+                    }
                 }
             }
         }
