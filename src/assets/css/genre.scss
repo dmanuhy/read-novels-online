@@ -1,0 +1,22 @@
+.genre-body {
+    background-color: #e0e0e0;
+
+    .left-content {
+        .genre-name {
+            border-bottom: 1px solid;
+        }
+
+        .novel-list {
+            .novel {
+                border-bottom: 1px dashed #ccc;
+            }
+        }
+    }
+
+    .right-content {
+        .genre-introduction {
+            padding         : 10px;
+            background-color: #ecf0f1;
+        }
+    }
+}

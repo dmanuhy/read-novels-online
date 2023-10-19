@@ -182,7 +182,9 @@ const Home = () => {
                                 <div className="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
                             </div>
                         </div>
-                        <GenreList />
+                        <div className="col-12 col-lg-4 ps-3 d-none d-lg-block">
+                            <GenreList />
+                        </div>
                     </div>
                 </div>
             </div>
