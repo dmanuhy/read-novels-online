@@ -1,8 +1,12 @@
 import "../assets/css/genre.scss"
 import GenreList from "./GenreList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import genres from "../json/genres.json"
+import { useParams } from "react-router-dom";
 
 const Genre = () => {
+    const { id } = useParams()
+    const genre = genres.find(genre => genre.id === id)
     return (
         <>
             <div className="genre-body py-4">
@@ -10,7 +14,7 @@ const Genre = () => {
                     <div className="row">
                         <div className="left-content col-8">
                             <div className="genre-name text-uppercase fs-4">
-                                Tiên hiệp
+                                {genre.name}
                             </div>
                             <div className="novel-list">
                                 <div className="novel row py-1">
@@ -53,7 +57,7 @@ const Genre = () => {
                         </div>
                         <div className="right-content col-4 row">
                             <div className="genre-introduction col-12 mb-4">
-                                <p>Truyện tiên hiệp thường kể về quá trình tu luyện và khám phá thế giới tu sĩ thần tiên đầy bí ẩn của nhân vật chính.</p>
+                                <p>{genre.introduction}</p>
                             </div>
                             <GenreList />
                         </div>

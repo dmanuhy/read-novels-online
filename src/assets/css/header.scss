@@ -36,19 +36,22 @@
                         border-top-left-radius : 0%;
                         border-top-right-radius: 0%;
                         width                  : 600px;
-                        padding                : 10px 10px 10px 10px;
+                        padding                : 10px;
 
                         .genre-list {
                             .genre-item {
-                                padding: 5px;
 
                                 a {
-                                    margin-left: 10px;
+                                    padding: 10px
+                                }
+
+                                a:hover {
+                                    background-color: #14425d;
                                 }
                             }
 
                             .genre-item:hover {
-                                background-color: #14425d;
+                                background-color: #31708f
                             }
                         }
                     }
@@ -59,15 +62,14 @@
 
                 .login-btn,
                 .register-btn {
-                    padding: 14px 0 14px 0;
+                    padding: 14px 5px 14px 5px;
 
-                    .dropdown-hover {
-                        padding: 14px;
-                    }
 
-                    .dropdown-hover:hover {
-                        background-color: #31708f;
-                    }
+                }
+
+                .login-btn:hover,
+                .register-btn:hover {
+                    background-color: #31708f;
                 }
             }
         }

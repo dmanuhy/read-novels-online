@@ -28,11 +28,10 @@ const Header = () => {
                                                 {
                                                     genres && genres.length > 0 &&
                                                     genres.map((item, index) => {
-                                                        console.log(item)
                                                         return (
-                                                            <div className="genre-item col-3" key={index}>
-                                                                <Link className="text-decoration-none text-white" to={`/genres/${item.id}`}>{item.genre}</Link>
-                                                            </div>
+                                                            <Dropdown.Item className="genre-item col-3 w-25" key={index}>
+                                                                <Link className="d-block text-decoration-none text-white" to={`/genres/${item.id}`}>{item.name}</Link>
+                                                            </Dropdown.Item>
                                                         )
                                                     })
                                                 }
