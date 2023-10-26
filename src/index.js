@@ -8,7 +8,7 @@ import axios from 'axios';
 
 library.add(faBook, faPencil, faList, faGear)
 
-axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8082';
+axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:9999';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
