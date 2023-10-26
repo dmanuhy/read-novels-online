@@ -1,0 +1,229 @@
+{
+  "roles": [
+    {
+      "id": "1",
+      "role": "Admin"
+    },
+    {
+      "id": "2",
+      "role": "Editor"
+    },
+    {
+      "id": "3",
+      "role": "Member"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "1",
+      "roleId": "1",
+      "username": "admin",
+      "password": "admin",
+      "isActived": true
+    },
+    {
+      "id": "2",
+      "roleId": "2",
+      "username": "editor",
+      "password": "editor",
+      "isActived": true
+    },
+    {
+      "id": "3",
+      "roleId": "3",
+      "username": "member",
+      "password": "member",
+      "isActived": true
+    }
+  ],
+  "novels": [
+    {
+      "id": "1",
+      "name": "Toàn Trí Độc Giả",
+      "author": "Manhwa TV",
+      "image": "https://truyenchu.vn/uploads/Images/toan-tri-doc-gia.jpg",
+      "genresID": [
+        "12",
+        "30",
+        "32"
+      ],
+      "introduction": "Chỉ mình tôi mới biết kết cục của thế giới này. Một ngày nọ, nhân vật chính của chúng ta bị kẹt trong thế giới của bộ tiểu thuyết mình ưa thích. Anh phải làm gì để sống sót? Trong một thế giới tràn ngập những tai họa và nguy hiểm. Ưu thế ư? Anh nắm rõ kịch bản của toàn bộ câu truyện, ngay từ đầu đến cuối. Vì anh là độc giả duy nhất vẫn còn gắn bó với nó. Hãy đọc câu truyện của anh ấy để hiểu được cách mà anh ta sống sót trong thế giới này.",
+      "chapters": [
+        {
+          "id": "1",
+          "title": "Mở đầu - Ba Cách để Sống sót trong một Thế giới Đổ nát.",
+          "content": ""
+        },
+        {
+          "id": "2",
+          "title": "Mở đầu - Ba Cách để Sống sót trong một Thế giới Đổ nát.",
+          "content": ""
+        }
+      ],
+      "isFinished": false,
+      "editorID": "2"
+    }
+  ],
+  "genres": [
+    {
+      "id": "1",
+      "name": "Bách Hợp",
+      "introduction": "Truyện tình cảm giữa nữ và nữ."
+    },
+    {
+      "id": "2",
+      "name": "Cổ Đại",
+      "introduction": "Truyện có nội dung xảy ra ở thời cổ đại phong kiến."
+    },
+    {
+      "id": "3",
+      "name": "Cung Đấu",
+      "introduction": "Truyện cung đấu là thể loại truyện có các nhân vật trong hoàng cung thời phong kiến đấu đá, âm mưu tính toán lẫn nhau."
+    },
+    {
+      "id": "4",
+      "name": "Dị Năng",
+      "introduction": "Truyện dị năng là thể loại thường có những nhân vật sở hữu các năng lực siêu nhiên đặc biệt mà người thường không thể nào có được."
+    },
+    {
+      "id": "5",
+      "name": "Dị Giới",
+      "introduction": "Trong truyện có xuất hiện những thế giới kỳ dị, khác với thế giới chúng ta đang sinh sống."
+    },
+    {
+      "id": "6",
+      "name": "Đam Mỹ",
+      "introduction": "Truyện tình cảm giữa nam và nam."
+    },
+    {
+      "id": "7",
+      "name": "Đông Phương",
+      "introduction": "Là những truyện có nội dung xảy ra ở các nước phương Đông."
+    },
+    {
+      "id": "8",
+      "name": "Đô Thị",
+      "introduction": "Những truyện có nội dung chủ yếu diễn ra trong môi trường đô thị hiện đại."
+    },
+    {
+      "id": "9",
+      "name": "Điền Văn",
+      "introduction": "Truyện điền văn kể về cuộc sống điền viên, chăm sóc nhà cửa, lo toan cuộc sống sự nghiệp cũng như đời sống tình cảm của nhân vật chính. Truyện thể loại này thường ngọt ngào, không có cao trào, nút thắt, tranh đấu, tuy nhiên vẫn có một số ngoại lệ."
+    },
+    {
+      "id": "10",
+      "name": "Đoản Văn",
+      "introduction": "Truyện đoản văn là những truyện có nội dung ngắn, thưởng chỉ có một đến vài chương."
+    },
+    {
+      "id": "11",
+      "name": "Gia Đấu",
+      "introduction": "Gia đấu cũng như trạch đấu là thể loại truyện có các tình tiết đấu đá, mưu tính nhau giữa các thành viên trong gia đình hoặc dòng họ."
+    },
+    {
+      "id": "12",
+      "name": "Hệ Thống",
+      "introduction": "Truyện hệ thống là truyện thường có nhân vật chính mang trong người một hệ thống. Hệ thống này thường cộng sinh với nhân vật chính, nhờ hoàn thành nhiệm vụ/yêu cầu thông qua nó, nhân vật chính có thể đạt được nhiều lợi ích."
+    },
+    {
+      "id": "13",
+      "name": "Huyền Huyễn",
+      "introduction": "Truyện có những yếu tố huyền bí, khoa học khó giải thích."
+    },
+    {
+      "id": "14",
+      "name": "Hài Hước",
+      "introduction": "Những bộ truyện có nội dung hài hước, đem lại tiếng cười vui vẻ cho độc giả."
+    },
+    {
+      "id": "15",
+      "name": "Kiếm Hiệp",
+      "introduction": "Truyện thường xoay quanh cuộc đời của nhân vật chính, quá trình rèn luyện, trưởng thành, tìm kiếm, học tập các bí kíp võ công, cùng những cuộc phiêu lưu, truy đuổi, chém giết... đầy nguy hiểm và cơ hội trong giới võ lâm giang hồ."
+    },
+    {
+      "id": "16",
+      "name": "Kinh Dị",
+      "introduction": "Truyện có nhiều yếu tố ma quỷ, rùng rợn, kinh dị."
+    },
+    {
+      "id": "17",
+      "name": "Khoa Huyễn",
+      "introduction": "Những bộ truyện có yếu tố khoa học bí ẩn."
+    },
+    {
+      "id": "18",
+      "name": "Lịch Sử",
+      "introduction": "Nội dung truyện thường xảy ra trong lịch sử, có nhiều yếu tố tương tự so với lịch sử thế giới thật."
+    },
+    {
+      "id": "19",
+      "name": "Light Novel",
+      "introduction": "Light Novel là một dạng tiểu thuyết Nhật Bản được viết nhằm chủ yếu hướng đến các độc giả trẻ như học sinh trung học. Dạng tiểu thuyết đang lan rộng và được giới tác giả cũng như độc giả trên thế giới đón nhận nồng nhiệt."
+    },
+    {
+      "id": "20",
+      "name": "Mạt Thế",
+      "introduction": "Là truyện có bối cảnh tận thế, thế giới bị sụp đổ và diệt vong vì những thảm họa."
+    },
+    {
+      "id": "21",
+      "name": "Ngôn Tình",
+      "introduction": "Truyện thuộc kiểu lãng mạn, kể về những sự kiện vui buồn trong tình yêu của nhân vật chính."
+    },
+    {
+      "id": "22",
+      "name": "Ngược",
+      "introduction": "Truyện ngược là thể loại truyện có những tình tiết khiến người xem xúc động mạnh, thường là tức giận, luyến tiếc thậm chí là ức chế thay cho nhân vật, khi mà họ bị hành hạ về mặt thể xác hoặc tinh thần."
+    },
+    {
+      "id": "23",
+      "name": "Nữ Cường",
+      "introduction": "Truyện nữ cường là thể loại truyện có những nhân vật nữ sở hữu tính cánh mạnh mẽ (có khi hơn cả đàn ông)."
+    },
+    {
+      "id": "24",
+      "name": "Nữ Phụ",
+      "introduction": "Truyện kể về nhân vật chính là... nữ phụ trong các tiểu thuyết."
+    },
+    {
+      "id": "25",
+      "name": "Phương Tây",
+      "introduction": "Những tác phẩm được viết bởi các tác giả phương Tây."
+    },
+    {
+      "id": "26",
+      "name": "Quan Trường",
+      "introduction": "Là truyện kể về những khía cạnh cũng như quá trình thăng quan tiến chức của nhân vật chính trong chính trường."
+    },
+    {
+      "id": "27",
+      "name": "Quân Sự",
+      "introduction": "Truyện có yếu tố quân sự, thường diễn ra trong môi trường quân đội, quân lính."
+    },
+    {
+      "id": "28",
+      "name": "Sủng",
+      "introduction": "Ngược với truyện ngược, truyện sủng là thể loại truyện khiến người đọc có cảm giác ngọt ngào vui vẻ, nơi mà nhân vật chính được nửa kia của mình quan tâm và cưng chiều hết mình."
+    },
+    {
+      "id": "29",
+      "name": "Tiên Hiệp",
+      "introduction": "Truyện tiên hiệp thường kể về quá trình tu luyện và khám phá thế giới tu sĩ thần tiên đầy bí ẩn của nhân vật chính."
+    },
+    {
+      "id": "30",
+      "name": "Thám Hiểm",
+      "introduction": "Nội dung truyện thường là những cuộc phiêu lưu thám hiểm những địa danh kỳ bí cực gay cấn."
+    },
+    {
+      "id": "31",
+      "name": "Trinh Thám",
+      "introduction": "Truyện trinh thám là thể loại truyện mang yếu tố điều tra, phá án mang nhiều yếu tố hình sự, với sự kích tính đến nghẹt thở từ những vụ án mạng ly kỳ hấp dẫn."
+    },
+    {
+      "id": "32",
+      "name": "Trọng Sinh",
+      "introduction": "Đây là thể truyện có nhân vật chính vì một lý do nào đó mà được sống lại sau khi chết đi, thể loại này thường kết hợp với thể loại xuyên không."
+    }
+  ]
+}

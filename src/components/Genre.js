@@ -1,12 +1,18 @@
 import "../assets/css/genre.scss"
 import GenreList from "./GenreList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import genres from "../json/genres.json"
 import { useParams } from "react-router-dom";
+import axios from 'axios';
+import { useState, useEffect } from "react";
 
 const Genre = () => {
     const { id } = useParams()
-    const genre = genres.find(genre => genre.id === id)
+    const [genre, setGenre] = useState({});
+    useEffect(() => {
+        axios.get(`/genres/${id}`)
+            .then(res => setGenre(res.data))
+            .catch(err => console.error(err));
+    }, [id])
     return (
         <>
             <div className="genre-body py-4">

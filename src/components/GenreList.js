@@ -1,7 +1,17 @@
+import { useState } from 'react'
 import '../assets/css/novel-genres.scss'
-import genres from "../json/genres.json"
-
+import { useEffect } from 'react';
+import axios from 'axios';
 const GenreList = () => {
+
+    const [genres, setGenres] = useState([]);
+
+    useEffect(() => {
+        axios.get(`/genres`)
+            .then(res => setGenres(res.data))
+            .catch(err => console.error(err));
+    }, [])
+
 
     return (
         <>
@@ -13,14 +23,13 @@ const GenreList = () => {
                         genres.map((item, index) => {
                             return (
                                 < div className="genre-item col-6" key={item.id} >
-                                    <div className="genre-name">{item.genre}</div>
+                                    <div className="genre-name">{item.name}</div>
                                 </div>
                             )
                         })
                     }
                 </div>
             </div >
-
         </>
     )
 }
