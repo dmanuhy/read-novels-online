@@ -1,11 +1,22 @@
 import logo from "../assets/image/logo.webp"
-import "../assets/css/header.scss"
+import "../assets/css/Header.scss"
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Navbar, Container } from 'react-bootstrap';
-import genres from "../json/genres.json"
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect } from "react"
+import axios from "axios";
+
 const Header = () => {
+
+    const [genres, setGenres] = useState([]);
+
+    useEffect(() => {
+        axios.get(`/genres?_sort=name`)
+            .then(res => setGenres(res.data))
+            .catch(err => console.error(err));
+    }, [])
+
     return (
         <>
             <div className="home-header">
@@ -24,13 +35,13 @@ const Header = () => {
                                             <span className="ms-1">Thể Loại</span>
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu className="dropdown-menu">
-                                            <div className="genre-list row px-4">
+                                            <div className="genre-list row px-2">
                                                 {
                                                     genres && genres.length > 0 &&
                                                     genres.map((item, index) => {
                                                         return (
-                                                            <Dropdown.Item className="genre-item col-3 w-25" key={index}>
-                                                                <Link className="d-block text-decoration-none text-white" to={`/genres/${item.id}`}>{item.name}</Link>
+                                                            <Dropdown.Item as={Link} className="genre-item col-3 w-25 text-white" key={item.id} to={`/genres/${item.id}`}>
+                                                                {item.name}
                                                             </Dropdown.Item>
                                                         )
                                                     })

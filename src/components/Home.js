@@ -1,6 +1,6 @@
 import image from '../assets/image/yeu-tham-tieng-vong.webp'
 import GenreList from './GenreList';
-import "../assets/css/home.scss"
+import "../assets/css/Home.scss"
 
 const Home = () => {
     return (

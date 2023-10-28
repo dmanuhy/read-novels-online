@@ -40,18 +40,11 @@
 
                         .genre-list {
                             .genre-item {
-
-                                a {
-                                    padding: 10px
-                                }
-
-                                a:hover {
-                                    background-color: #14425d;
-                                }
+                                font-size: 17px;
                             }
 
                             .genre-item:hover {
-                                background-color: #31708f
+                                background-color: #14425d
                             }
                         }
                     }
