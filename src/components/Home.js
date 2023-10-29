@@ -119,7 +119,7 @@ const Home = () => {
                     </div>
 
                     <div className="home-section row g-3 text-center mb-4">
-                        <div className="text-start col-12 col-lg-8">
+                        <div className="text-start col-12 col-lg-9">
                             <div className="title text-uppercase">Truyện Mới Cập Nhật</div>
                             <div className="new-novel row">
                                 <div className="new-novel-name col-9 col-lg-5">Yêu Thầm Tiếng Vọng</div>
@@ -182,7 +182,7 @@ const Home = () => {
                                 <div className="d-none d-lg-block updated-time col-2">2 Giờ Trước</div>
                             </div>
                         </div>
-                        <div className="col-12 col-lg-4 ps-3 d-none d-lg-block">
+                        <div className="col-12 col-lg-3 ps-3 d-none d-lg-block">
                             <GenreList />
                         </div>
                     </div>

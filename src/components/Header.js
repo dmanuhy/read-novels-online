@@ -22,7 +22,7 @@ const Header = () => {
             <div className="home-header">
                 <Navbar expand="lg">
                     <Container>
-                        <Navbar.Brand href="/">
+                        <Navbar.Brand as={Link} to="/">
                             <img className="navbar-brand" src={logo} alt="Logo" />
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" className="bg-white" />

@@ -1,0 +1,45 @@
+.novel-list {
+    .novel {
+        border-bottom: 1px dashed #ccc;
+
+        .novel-image {
+            img {
+                width : 185px;
+                height: 260px;
+            }
+        }
+
+        .novel-general {
+            .novel-name {
+                font-size: 20px;
+            }
+
+            .novel-author {
+                font-size: 18px;
+            }
+
+            .novel-introduction {
+                overflow: hidden;
+            }
+
+            .novel-newest-chapter {
+                font-size: 18px;
+
+                .chapter-link {
+                    color: #31708f;
+                }
+
+                .chapter-link:hover {
+                    text-decoration: underline;
+                    cursor         : pointer;
+                }
+            }
+
+            .novel-name:hover,
+            .novel-author:hover {
+                text-decoration: underline !important;
+                cursor         : pointer;
+            }
+        }
+    }
+}

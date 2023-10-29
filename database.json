@@ -122,7 +122,7 @@
     {
       "id": "9",
       "name": "Huyền Bí",
-      "introduction": "Truyện có những yếu tố huyền bí, khoa học khó giải thích."
+      "introduction": "Truyện có những yếu tố huyền bí, khoa học khó giải thích và những nỗ lực của nhân vật chính nhằm tìm ra sự thật."
     },
     {
       "id": "10",
@@ -193,6 +193,11 @@
       "id": "23",
       "name": "Tâm Lý",
       "introduction": "Truyện đi sau vào khắc họa những vấn đề về tâm lý của nhân vật"
+    },
+    {
+      "id": "24",
+      "name": "Học Đường",
+      "introduction": "Ngữ cảnh diễn biến câu chuyện chủ yếu ở trường học, diễn biến chính xoay quanh học sinh, sinh viên hoặc giáo viên, giảng viên"
     }
   ],
   "novelGenre": [
@@ -211,6 +216,10 @@
     {
       "novelId": "2",
       "genreId": "9"
+    },
+    {
+      "novelId": "2",
+      "genreId": "24"
     }
   ]
 }
