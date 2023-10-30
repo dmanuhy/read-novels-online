@@ -1,121 +1,41 @@
-import image from '../assets/image/yeu-tham-tieng-vong.webp'
+
 import GenreList from './GenreList';
 import "../assets/css/Home.scss"
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Home = () => {
+
+    const [hotNovels, setHotNovels] = useState([])
+
+    useEffect(() => {
+        axios.get(`/novels?_page=1&_limit=12`)
+            .then(res => setHotNovels(res.data))
+            .catch(err => console.error(err));
+    }, [])
+
     return (
         <>
             <div className="home-body py-4">
                 <div className="container home-container">
                     <div className="home-section row g-3 text-center mb-5">
                         <div className="title text-start text-uppercase col-12">Truyện HOT</div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image} alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6 col-sm-4 col-md-3 col-lg-2">
-                            <div className="novel position-relative">
-                                <img className="card-img-top novel-image img-fluid" src={image}
-                                    alt="..." />
-                                <div className="novel-name py-1 text-center">
-                                    <span>Yêu Thầm Tiếng Vọng</span>
-                                </div>
-                            </div>
-                        </div>
+                        {
+                            hotNovels.length > 0 &&
+                            hotNovels.map((item, index) => {
+                                return (
+                                    <div className="col-6 col-sm-4 col-md-3 col-lg-2">
+                                        <div className="novel position-relative">
+                                            <img className="card-img-top novel-image img-fluid" src={item.image}
+                                                alt="..." />
+                                            <div className="novel-name py-1 text-center">
+                                                <span>{item.name}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
 
                     <div className="home-section row g-3 text-center mb-4">

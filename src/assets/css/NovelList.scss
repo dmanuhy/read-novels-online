@@ -20,6 +20,10 @@
 
             .novel-introduction {
                 overflow: hidden;
+
+                p {
+                    margin-bottom: 0 !important;
+                }
             }
 
             .novel-newest-chapter {

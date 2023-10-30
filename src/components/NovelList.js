@@ -23,8 +23,7 @@ const NovelList = (props) => {
                                         <FontAwesomeIcon icon="fa-solid fa-pencil" />
                                         <span className="ms-1">{item.author}</span>
                                     </div>
-                                    <div className="novel-introduction">
-                                        <span className="ms-2">{item.introduction}</span>
+                                    <div className="novel-introduction" dangerouslySetInnerHTML={{ __html: item.introduction }}>
                                     </div>
                                     <div className="novel-newest-chapter">
                                         <span>Chương Mới Nhất: </span>

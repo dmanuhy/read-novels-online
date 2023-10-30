@@ -1,4 +1,4 @@
-import logo from "../assets/image/logo.webp"
+import logo from "../assets/image/logo.png"
 import "../assets/css/Header.scss"
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Navbar, Container } from 'react-bootstrap';
