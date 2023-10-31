@@ -58,13 +58,7 @@
                     padding: 14px 9px 14px 9px;
                 }
 
-                .login-btn,
-                .register-btn {
-                    a:hover {
-                        padding         : 14px 10px 14px 10px;
-                        background-color: #31708f;
-                    }
-                }
+
             }
         }
     }
@@ -76,4 +70,24 @@
     height          : 30px;
     overflow        : hidden;
     text-overflow   : ellipsis;
+}
+
+@media screen and (max-width: 991px) {
+
+    .login-btn,
+    .register-btn {
+        a:hover {
+            padding         : 17px 12px 17px 12px;
+            background-color: #31708f;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .login-btn:hover,
+    .register-btn:hover {
+        padding         : 17px 5px 17px 5px;
+        background-color: #31708f;
+    }
 }

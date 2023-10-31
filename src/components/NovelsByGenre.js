@@ -1,7 +1,6 @@
 import "../assets/css/NovelsByGenre.scss"
 import GenreList from "./GenreList";
 import NovelList from "./NovelList";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 import { useState, useEffect } from "react";

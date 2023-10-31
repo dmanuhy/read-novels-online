@@ -73,7 +73,15 @@
 }
 
 @media screen and (max-width: 576px) {
-    .novel-image {
-        height: 360px !important;
+    .home-body {
+        .home-container {
+            .home-section {
+                .novel {
+                    .novel-image {
+                        height: 360px !important;
+                    }
+                }
+            }
+        }
     }
 }

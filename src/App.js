@@ -10,6 +10,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/genres/:id" element={<NovelsByGenre />} />
+          <Route path="/novels/:id" />
+          <Route path="/novels/:novel/chapters/:chapter" />
         </Routes>
         <Footer />
       </BrowserRouter>
