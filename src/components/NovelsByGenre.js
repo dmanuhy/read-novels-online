@@ -38,14 +38,14 @@ const NovelsByGenre = () => {
             <div className="genre-body py-4">
                 <div className="container">
                     <div className="row">
-                        <div className="left-content col-9">
+                        <div className="left-content col-12 col-lg-9">
                             <div className="genre-name text-uppercase fs-4">
                                 Truyện {genre.name}
                             </div>
                             <NovelList novels={novels} />
                         </div>
-                        <div className="right-content col-3 row">
-                            <div className="genre-introduction col-12 mb-4">
+                        <div className="right-content col-3 d-none d-lg-block">
+                            <div className="genre-introduction mb-4">
                                 <p>{genre.introduction}</p>
                             </div>
                             <GenreList />

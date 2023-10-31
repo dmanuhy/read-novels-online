@@ -51,8 +51,21 @@
                     color      : #31708f;
                 }
 
-                .new-novel .new-novel-name {
+                .new-novel-name {
                     font-weight: 600;
+                }
+
+                .new-novel-name:hover,
+                .new-novel-chapter:hover {
+                    cursor         : pointer;
+                    text-decoration: underline !important;
+                    color          : #31708f !important;
+                }
+
+                .new-novel-genre {
+                    a:hover {
+                        text-decoration: underline !important;
+                    }
                 }
             }
         }

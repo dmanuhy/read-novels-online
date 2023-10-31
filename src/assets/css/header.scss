@@ -58,9 +58,12 @@
                     padding: 14px 9px 14px 9px;
                 }
 
-                .login-btn:hover,
-                .register-btn:hover {
-                    background-color: #31708f;
+                .login-btn,
+                .register-btn {
+                    a:hover {
+                        padding         : 14px 10px 14px 10px;
+                        background-color: #31708f;
+                    }
                 }
             }
         }

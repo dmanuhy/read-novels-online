@@ -60,6 +60,7 @@
           "uploadedDate": "2023-10-12T10:30:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -77,6 +78,7 @@
           "uploadedDate": "2023-10-12T10:27:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -94,6 +96,7 @@
           "uploadedDate": "2023-10-11T10:17:00.240Z"
         }
       ],
+      "isHot": false,
       "isFinished": false,
       "editorID": "2"
     },
@@ -111,6 +114,7 @@
           "uploadedDate": "2023-10-13T10:27:13.240Z"
         }
       ],
+      "isHot": false,
       "isFinished": false,
       "editorID": "2"
     },
@@ -128,6 +132,7 @@
           "uploadedDate": "2023-10-20T10:27:13.240Z"
         }
       ],
+      "isHot": false,
       "isFinished": false,
       "editorID": "2"
     },
@@ -151,6 +156,7 @@
           "uploadedDate": "2023-10-17T10:27:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -174,6 +180,7 @@
           "uploadedDate": "2023-10-30T10:40:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -191,6 +198,7 @@
           "uploadedDate": "2023-10-22T10:27:13.240Z"
         }
       ],
+      "isHot": false,
       "isFinished": false,
       "editorID": "2"
     },
@@ -208,6 +216,7 @@
           "uploadedDate": "2023-10-25T10:27:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -225,6 +234,7 @@
           "uploadedDate": "2023-10-19T10:27:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -242,6 +252,7 @@
           "uploadedDate": "2023-10-26T10:27:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -259,6 +270,7 @@
           "uploadedDate": "2023-10-20T10:27:13.240Z"
         }
       ],
+      "isHot": false,
       "isFinished": false,
       "editorID": "2"
     },
@@ -276,6 +288,7 @@
           "uploadedDate": "2023-10-21T10:27:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -293,6 +306,7 @@
           "uploadedDate": "2023-10-23T10:27:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -310,6 +324,7 @@
           "uploadedDate": "2023-10-24T10:27:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -327,6 +342,7 @@
           "uploadedDate": "2023-10-25T10:27:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     },
@@ -344,6 +360,7 @@
           "uploadedDate": "2023-10-26T10:27:13.240Z"
         }
       ],
+      "isHot": true,
       "isFinished": false,
       "editorID": "2"
     }
@@ -481,10 +498,6 @@
     },
     {
       "novelId": "2",
-      "genreId": "4"
-    },
-    {
-      "novelId": "2",
       "genreId": "9"
     },
     {
@@ -569,10 +582,6 @@
     },
     {
       "novelId": "11",
-      "genreId": "4"
-    },
-    {
-      "novelId": "11",
       "genreId": "9"
     },
     {
@@ -601,10 +610,6 @@
     },
     {
       "novelId": "13",
-      "genreId": "4"
-    },
-    {
-      "novelId": "13",
       "genreId": "9"
     },
     {
@@ -613,10 +618,6 @@
     },
     {
       "novelId": "14",
-      "genreId": "4"
-    },
-    {
-      "novelId": "14",
       "genreId": "9"
     },
     {
@@ -625,10 +626,6 @@
     },
     {
       "novelId": "15",
-      "genreId": "4"
-    },
-    {
-      "novelId": "15",
       "genreId": "9"
     },
     {
@@ -637,19 +634,11 @@
     },
     {
       "novelId": "16",
-      "genreId": "4"
-    },
-    {
-      "novelId": "16",
       "genreId": "9"
     },
     {
       "novelId": "16",
       "genreId": "24"
-    },
-    {
-      "novelId": "17",
-      "genreId": "4"
     },
     {
       "novelId": "17",
