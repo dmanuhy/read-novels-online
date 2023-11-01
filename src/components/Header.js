@@ -2,21 +2,49 @@ import logo from "../assets/image/logo.png"
 import "../assets/css/Header.scss"
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Navbar, Container } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect } from "react"
+import Select from "react-select";
 import axios from "axios";
 
 const Header = () => {
 
     const [genres, setGenres] = useState([]);
+    const [novels, setNovels] = useState([]);
+    const [selectedOption, setSelectedOption] = useState(null);
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         axios.get(`/genres?_sort=name`)
             .then(res => setGenres(res.data))
             .catch(err => console.error(err));
+        axios.get(`/novels`)
+            .then(res => setNovels(res.data))
+            .catch(err => console.error(err));
     }, [])
 
+    useEffect(() => {
+        if (selectedOption !== null && selectedOption.value) {
+            let novelId = selectedOption.value
+            setSelectedOption(null)
+            navigate(`/novels/${novelId}`);
+        }
+    }, [selectedOption])
+
+    const buildSearchData = (inputData) => {
+        let result = [];
+        if (inputData && inputData.length > 0) {
+            inputData.forEach((item, index) => {
+                let object = {};
+                object.label = item.name
+                object.value = item.id
+                result.push(object);
+            })
+        }
+        return result;
+    }
     return (
         <>
             <div className="home-header">
@@ -78,8 +106,15 @@ const Header = () => {
                                     </Dropdown>
                                 </div>
                                 <div className="right-menu d-flex flex-lg-row align-items-lg-center flex-column mb-lg-0 mb-2">
-                                    <input type="text" className="mx-2 ps-3 border rounded-1 search my-1"
-                                        placeholder="Tìm truyện ..." />
+                                    <div className="me-3 mb-2 mb-lg-0" style={{ width: "250px" }}>
+                                        <Select
+                                            placeholder="Tìm truyện..."
+                                            styles={{ width: "200px" }}
+                                            defaultValue={selectedOption}
+                                            onChange={setSelectedOption}
+                                            options={buildSearchData(novels)}
+                                        />
+                                    </div>
                                     <div className="login-btn">
                                         <a href="/" className="text-decoration-none text-white dropdown-hover">Đăng nhập</a>
                                     </div>
