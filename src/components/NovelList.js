@@ -51,15 +51,16 @@ const NovelList = (props) => {
                         </div>
                 }
             </div>
-            <Pagination
-                className="pagination-bar"
-                currentPage={currentPage}
-                totalCount={novels.length}
-                pageSize={PAGE_SIZE}
-                onPageChange={page => setCurrentPage(page)}
-            />
+            <div className="d-flex justify-content-center mt-2">
+                <Pagination
+                    className="pagination-bar"
+                    currentPage={currentPage}
+                    totalCount={novels.length}
+                    pageSize={PAGE_SIZE}
+                    onPageChange={page => setCurrentPage(page)}
+                />
+            </div>
         </>
-
     )
 }
 

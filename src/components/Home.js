@@ -65,7 +65,7 @@ const Home = () => {
                                                     novelsGenre.filter((novel) => novel.novelId === item.id).map((novelGenre) => {
                                                         return (
                                                             <>
-                                                                <Link to={`/genres/${novelGenre.genreId}`} className=' text-decoration-none text-dark'>{genres.find((genre) => genre.id === novelGenre.genreId).name}</Link><span> | </span>
+                                                                [<Link to={`/genres/${novelGenre.genreId}`} className=' text-decoration-none text-dark'>{genres.find((genre) => genre.id === novelGenre.genreId).name}</Link>]<span> </span>
                                                             </>
                                                         )
                                                     })
