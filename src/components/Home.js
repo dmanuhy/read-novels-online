@@ -6,6 +6,7 @@ import axios from 'axios';
 import moment from 'moment/moment';
 import "moment/locale/vi";
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Home = () => {
     const [genres, setGenres] = useState([]);
@@ -32,7 +33,10 @@ const Home = () => {
             <div className="home-body py-4">
                 <div className="container home-container">
                     <div className="home-section row g-3 text-center mb-5">
-                        <div className="title text-start text-uppercase col-12">Truyện HOT</div>
+                        <div className="title text-start text-uppercase col-12">
+                            <span>Truyện HOT </span>
+                            <FontAwesomeIcon icon="fa-solid fa-fire" />
+                        </div>
                         {
                             novels.filter(novel => novel.isHot === true).slice(0, 12).map((item, index) => {
                                 return (

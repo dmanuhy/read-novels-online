@@ -53,6 +53,10 @@
 
             .right-menu {
 
+                .select__menu-list::-webkit-scrollbar {
+                    display: none;
+                }
+
                 .login-btn,
                 .register-btn {
                     padding: 14px 9px 14px 9px;
