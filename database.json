@@ -457,122 +457,122 @@
   ],
   "genres": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Bách Hợp",
       "introduction": "Truyện tình cảm giữa nữ và nữ."
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Cổ Đại",
       "introduction": "Truyện có nội dung xảy ra ở thời cổ đại phong kiến."
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Siêu Nhiên",
       "introduction": "Truyện thường có những nhân vật sở hữu các năng lực siêu nhiên đặc biệt mà người thường không thể nào có được."
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Hành Động",
       "introduction": "Thể loại này thường có nội dung về đánh nhau, bạo lực, hỗn loạn, với diễn biến nhanh"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Đam Mỹ",
       "introduction": "Truyện tình cảm giữa nam và nam."
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Hiện Đại",
       "introduction": "Những truyện có nội dung chủ yếu diễn ra trong môi trường đô thị hiện đại."
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Đời Thường",
       "introduction": "Truyện điền văn kể về cuộc sống điền viên, chăm sóc nhà cửa, lo toan cuộc sống sự nghiệp cũng như đời sống tình cảm của nhân vật chính. Truyện thể loại này thường ngọt ngào, không có cao trào, nút thắt, tranh đấu, tuy nhiên vẫn có một số ngoại lệ."
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Đoản Văn",
       "introduction": "Truyện đoản văn là những truyện có nội dung ngắn, thưởng chỉ có một đến vài chương."
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "Huyền Bí",
       "introduction": "Truyện có những yếu tố huyền bí, khoa học khó giải thích và những nỗ lực của nhân vật chính nhằm tìm ra sự thật."
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "Hài Hước",
       "introduction": "Những bộ truyện có nội dung hài hước, đem lại tiếng cười vui vẻ cho độc giả."
     },
     {
-      "id": "11",
+      "id": 11,
       "name": "Kiếm Hiệp",
       "introduction": "Truyện thường xoay quanh cuộc đời của nhân vật chính, quá trình rèn luyện, trưởng thành, tìm kiếm, học tập các bí kíp võ công, cùng những cuộc phiêu lưu, truy đuổi, chém giết... đầy nguy hiểm và cơ hội trong giới võ lâm giang hồ."
     },
     {
-      "id": "12",
+      "id": 12,
       "name": "Kinh Dị",
       "introduction": "Truyện có nhiều yếu tố ma quỷ, rùng rợn, kinh dị."
     },
     {
-      "id": "13",
+      "id": 13,
       "name": "Khoa Huyễn",
       "introduction": "Bao gồm những chuyện Khoa Học - Viễn Tưởng, đa phần chúng xoay quanh nhiều hiện tượng mà liên quan tới khoa học, công nghệ, tuy vậy thường thì những câu chuyện đó không gắn bó chặt chẽ với các thành tựu khoa học hiện thời, mà là do con người tưởng tượng ra"
     },
     {
-      "id": "14",
+      "id": 14,
       "name": "Lịch Sử",
       "introduction": "Nội dung truyện thường xảy ra trong lịch sử, có nhiều yếu tố tương tự so với lịch sử thế giới thật."
     },
     {
-      "id": "15",
+      "id": 15,
       "name": "Light Novel",
       "introduction": "Light Novel là một dạng tiểu thuyết Nhật Bản được viết nhằm chủ yếu hướng đến các độc giả trẻ như học sinh trung học. Dạng tiểu thuyết đang lan rộng và được giới tác giả cũng như độc giả trên thế giới đón nhận nồng nhiệt."
     },
     {
-      "id": "16",
+      "id": 16,
       "name": "Ngôn Tình",
       "introduction": "Truyện thuộc kiểu lãng mạn, kể về những sự kiện vui buồn trong tình yêu của nhân vật chính."
     },
     {
-      "id": "17",
+      "id": 17,
       "name": "Quân Sự",
       "introduction": "Truyện có yếu tố quân sự, thường diễn ra trong môi trường quân đội, quân lính."
     },
     {
-      "id": "18",
+      "id": 18,
       "name": "Thám Hiểm",
       "introduction": "Nội dung truyện thường là những cuộc phiêu lưu thám hiểm những địa danh kỳ bí cực gay cấn."
     },
     {
-      "id": "19",
+      "id": 19,
       "name": "Trinh Thám",
       "introduction": "Truyện trinh thám là thể loại truyện mang yếu tố điều tra, phá án mang nhiều yếu tố hình sự, với sự kích tính đến nghẹt thở từ những vụ án mạng ly kỳ hấp dẫn."
     },
     {
-      "id": "20",
+      "id": 20,
       "name": "Xuyên Không",
       "introduction": "Đây là thể truyện có nhân vật chính vì một lý do nào đó mà được sống lại sau khi chết đi, thể loại này thường kết hợp với thể loại xuyên không."
     },
     {
-      "id": "21",
+      "id": 21,
       "name": "Bi Kịch",
       "introduction": "Thể loại mang đến cho người xem những cảm xúc khác nhau: buồn bã, căng thẳng thậm chí là bi phẫn"
     },
     {
-      "id": "22",
+      "id": 22,
       "name": "Thể Thao",
       "introduction": "Đúng như tên gọi, những môn thể thao như bóng đá, bóng chày, bóng chuyền, đua xe, cầu lông,... là một phần của thể loại này"
     },
     {
-      "id": "23",
+      "id": 23,
       "name": "Tâm Lý",
       "introduction": "Truyện đi sau vào khắc họa những vấn đề về tâm lý của nhân vật"
     },
     {
-      "id": "24",
+      "id": 24,
       "name": "Học Đường",
       "introduction": "Ngữ cảnh diễn biến câu chuyện chủ yếu ở trường học, diễn biến chính xoay quanh học sinh, sinh viên hoặc giáo viên, giảng viên"
     }
@@ -581,261 +581,261 @@
     {
       "id": 1,
       "novelId": 1,
-      "genreId": "3"
+      "genreId": 3
     },
     {
       "id": 2,
       "novelId": 1,
-      "genreId": "4"
+      "genreId": 4
     },
     {
       "id": 3,
       "novelId": 2,
-      "genreId": "9"
+      "genreId": 9
     },
     {
       "id": 4,
       "novelId": 2,
-      "genreId": "24"
+      "genreId": 24
     },
     {
       "id": 5,
       "novelId": 3,
-      "genreId": "16"
+      "genreId": 16
     },
     {
       "id": 6,
       "novelId": 3,
-      "genreId": "6"
+      "genreId": 6
     },
     {
       "id": 7,
       "novelId": 4,
-      "genreId": "16"
+      "genreId": 16
     },
     {
       "id": 8,
       "novelId": 5,
-      "genreId": "4"
+      "genreId": 4
     },
     {
       "id": 9,
       "novelId": 5,
-      "genreId": "11"
+      "genreId": 11
     },
     {
       "id": 10,
       "novelId": 5,
-      "genreId": "18"
+      "genreId": 18
     },
     {
       "id": 11,
       "novelId": 6,
-      "genreId": "11"
+      "genreId": 11
     },
     {
       "id": 12,
       "novelId": 6,
-      "genreId": "18"
+      "genreId": 18
     },
     {
       "id": 13,
       "novelId": 7,
-      "genreId": "1"
+      "genreId": 1
     },
     {
       "id": 14,
       "novelId": 7,
-      "genreId": "24"
+      "genreId": 24
     },
     {
       "id": 15,
       "novelId": 8,
-      "genreId": "9"
+      "genreId": 9
     },
     {
       "id": 16,
       "novelId": 8,
-      "genreId": "12"
+      "genreId": 12
     },
     {
       "id": 17,
       "novelId": 8,
-      "genreId": "14"
+      "genreId": 14
     },
     {
       "id": 18,
       "novelId": 9,
-      "genreId": "1"
+      "genreId": 1
     },
     {
       "id": 19,
       "novelId": 9,
-      "genreId": "19"
+      "genreId": 19
     },
     {
       "id": 20,
       "novelId": 10,
-      "genreId": "15"
+      "genreId": 15
     },
     {
       "id": 21,
       "novelId": 10,
-      "genreId": "23"
+      "genreId": 23
     },
     {
       "id": 22,
       "novelId": 10,
-      "genreId": "24"
+      "genreId": 24
     },
     {
       "id": 23,
       "novelId": 10,
-      "genreId": "24"
+      "genreId": 24
     },
     {
       "id": 24,
       "novelId": 11,
-      "genreId": "9"
+      "genreId": 9
     },
     {
       "id": 25,
       "novelId": 11,
-      "genreId": "24"
+      "genreId": 24
     },
     {
       "id": 26,
       "novelId": 12,
-      "genreId": "3"
+      "genreId": 3
     },
     {
       "id": 27,
       "novelId": 12,
-      "genreId": "4"
+      "genreId": 4
     },
     {
       "id": 28,
       "novelId": 12,
-      "genreId": "10"
+      "genreId": 10
     },
     {
       "id": 29,
       "novelId": 12,
-      "genreId": "20"
+      "genreId": 20
     },
     {
       "id": 30,
       "novelId": 12,
-      "genreId": "15"
+      "genreId": 15
     },
     {
       "id": 31,
       "novelId": 13,
-      "genreId": "9"
+      "genreId": 9
     },
     {
       "id": 32,
       "novelId": 13,
-      "genreId": "24"
+      "genreId": 24
     },
     {
       "id": 33,
       "novelId": 14,
-      "genreId": "9"
+      "genreId": 9
     },
     {
       "id": 34,
       "novelId": 14,
-      "genreId": "24"
+      "genreId": 24
     },
     {
       "id": 35,
       "novelId": 15,
-      "genreId": "9"
+      "genreId": 9
     },
     {
       "id": 36,
       "novelId": 15,
-      "genreId": "24"
+      "genreId": 24
     },
     {
       "id": 37,
       "novelId": 16,
-      "genreId": "9"
+      "genreId": 9
     },
     {
       "id": 38,
       "novelId": 16,
-      "genreId": "24"
+      "genreId": 24
     },
     {
       "id": 39,
       "novelId": 17,
-      "genreId": "9"
+      "genreId": 9
     },
     {
       "id": 40,
       "novelId": 17,
-      "genreId": "24"
+      "genreId": 24
     },
     {
       "novelId": 18,
-      "genreId": "6",
+      "genreId": 6,
       "id": 41
     },
     {
       "novelId": 18,
-      "genreId": "16",
+      "genreId": 16,
       "id": 42
     },
     {
       "novelId": 19,
-      "genreId": "2",
+      "genreId": 2,
       "id": 43
     },
     {
       "novelId": 19,
-      "genreId": "1",
+      "genreId": 1,
       "id": 44
     },
     {
       "novelId": 20,
-      "genreId": "15",
+      "genreId": 15,
       "id": 45
     },
     {
       "novelId": 20,
-      "genreId": "20",
+      "genreId": 20,
       "id": 46
     },
     {
       "novelId": 20,
-      "genreId": "16",
+      "genreId": 16,
       "id": 47
     },
     {
       "novelId": 21,
-      "genreId": "15",
+      "genreId": 15,
       "id": 48
     },
     {
       "novelId": 21,
-      "genreId": "7",
+      "genreId": 7,
       "id": 49
     },
     {
       "novelId": 22,
-      "genreId": "15",
+      "genreId": 15,
       "id": 50
     },
     {
       "novelId": 22,
-      "genreId": "13",
+      "genreId": 13,
       "id": 51
     },
     {
       "novelId": 22,
-      "genreId": "4",
+      "genreId": 4,
       "id": 52
     }
   ]
