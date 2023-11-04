@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../assets/css/NovelList.scss"
-import { useState, useMemo, useEffect } from "react";
-import Pagination from "./Paginatation/Pagination";
+import { useState, useMemo } from "react";
+import Pagination from "./Pagination/Pagination";
 
 const PAGE_SIZE = 5;
 

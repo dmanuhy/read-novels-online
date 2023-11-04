@@ -32,7 +32,7 @@ const Header = () => {
             setSelectedOption(null)
             navigate(`/novels/${novelId}`);
         }
-    }, [selectedOption])
+    }, [selectedOption, navigate])
 
     const buildSearchData = (inputData) => {
         let result = [];

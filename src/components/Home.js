@@ -15,13 +15,22 @@ const Home = () => {
 
     useEffect(() => {
         axios.get(`/novels`)
-            .then(res => setNovels(res.data))
+            .then(res => {
+                setNovels(res.data)
+                console.log(res.data)
+            })
             .catch(err => console.error(err));
         axios.get(`/genres`)
-            .then(res => setGenres(res.data))
+            .then(res => {
+                setGenres(res.data)
+                console.log(res.data)
+            })
             .catch(err => console.error(err));
         axios.get(`/novelGenre`)
-            .then(res => setNovelsGenre(res.data))
+            .then(res => {
+                setNovelsGenre(res.data)
+                console.log(res.data)
+            })
             .catch(err => console.log(err))
     }, [])
     useEffect(() => {
