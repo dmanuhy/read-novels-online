@@ -1,6 +1,7 @@
 import { Editor } from 'primereact/editor';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CreateNovel = () => {
 
@@ -128,18 +129,20 @@ const CreateNovel = () => {
                     <div className='col-12 col-md-5 d-flex flex-column gap-5'>
                         <div className='d-flex align-items-center justify-content-between fs-5'>
                             <label htmlFor='novelName'>Tên Truyện</label>
-                            <input id='novelName' style={{ width: "400px", height: "40px" }} className='px-2 border border-secondary border-2 rounded-2' type='text' value={novelName} onChange={(event) => setNovelName(event.target.value)} />
+                            <input id='novelName' placeholder='Nhập tên truyện ...' style={{ width: "360px", height: "40px" }} className='px-2 border border-secondary border-2 rounded-2' type='text' value={novelName} onChange={(event) => setNovelName(event.target.value)} />
                         </div>
                         <div className='d-flex align-items-center justify-content-between fs-5'>
                             <label htmlFor='authorInput'>Tác Giả</label>
-                            <input id='authorInput' style={{ width: "400px", height: "40px" }} className='px-2 border border-secondary border-2 rounded-2' type='text' value={author} onChange={(event) => setAuthor(event.target.value)} />
+                            <input id='authorInput' placeholder='Nhập tên tác giả ...' style={{ width: "360px", height: "40px" }} className='px-2 border border-secondary border-2 rounded-2' type='text' value={author} onChange={(event) => setAuthor(event.target.value)} />
                         </div>
                         <div className='d-flex justify-content-between'>
                             <div className='d-flex flex-column gap-3'>
                                 <label className='fs-5 me-3'>Hình Ảnh Minh Họa</label>
                                 <input onChange={(event) => handleOnChangeImage(event)} type='file' id='novelImage' hidden />
                                 <label style={{ cursor: "pointer" }} htmlFor='novelImage'>
-                                    <span className='border px-4 py-2 bg-primary text-white'>Tải Ảnh</span>
+                                    <span className='border px-4 py-2 bg-primary text-white'>
+                                        <FontAwesomeIcon icon="fa-solid fa-upload" /> Tải Ảnh
+                                    </span>
                                 </label>
                             </div>
                             {
@@ -163,7 +166,7 @@ const CreateNovel = () => {
                         {
                             genres.map((item, index) => {
                                 return (
-                                    <div className='col-3' key={index}>
+                                    <div className='col-6 col-md-3' key={index}>
                                         <input onClick={() => handleChooseGenre(item.id)} type='checkbox' id={item.id} /> <label htmlFor={item.id}>{item.name}</label>
                                     </div>
                                 )
@@ -174,11 +177,11 @@ const CreateNovel = () => {
 
                 <div className='my-5'>
                     <div className='d-flex justify-content-between mb-4'>
-                        <div className='d-flex'>
+                        <div className='d-flex flex-column flex-lg-row'>
                             <label className='fs-5 me-4'>
                                 Chương 1
                             </label>
-                            <input value={chapterTitle} onChange={(event) => setChapterTitle(event.target.value)} style={{ width: "400px", height: '30px' }} className='px-2 border border-secondary border-2 rounded-2' type='text' placeholder='Nhập tiêu đề (Không bắt buộc)' />
+                            <input value={chapterTitle} onChange={(event) => setChapterTitle(event.target.value)} style={{ width: "300px", height: '30px' }} className='me-2 px-2 border border-secondary border-2 rounded-2' type='text' placeholder='Nhập tiêu đề (Không bắt buộc)' />
                         </div>
                         <span className='text-danger'>BẮT BUỘC: Truyện mới cần phải có chương mở đầu</span>
                     </div>

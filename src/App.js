@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, Header, Footer, NovelsByGenre, CreateNovel } from "./components/index"
+import { Home, Header, Footer, NovelsByGenre } from "./components/index"
+import CreateNovel from "./components/Editor/CreateNovel";
 import "./assets/css/layout.scss"
 
 const App = () => {
