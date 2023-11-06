@@ -61,6 +61,9 @@
                 .register-btn {
                     button {
                         padding: 14px 9px 14px 9px;
+
+                        padding: 14px 9px 14px 9px;
+
                         background-color: #14425d;
                         border: none;
                     }
@@ -94,8 +97,10 @@
     .login-btn,
     .register-btn,
     .checkout-btn {
-        button:hover {
-            background-color: #31708f !important;
+        .register-btn {
+            button:hover {
+                background-color: #31708f !important;
+            }
         }
     }
 }

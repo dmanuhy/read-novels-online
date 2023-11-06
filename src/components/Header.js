@@ -122,24 +122,6 @@ const Header = () => {
                                             </div>
                                         </Dropdown.Menu>
                                     </Dropdown>
-
-                                    <Dropdown className="dropdown text-white genre">
-                                        <Dropdown.Toggle className="dropdown-hover">
-                                            <FontAwesomeIcon icon="fa-solid fa-gear" />
-                                            <span className="ms-1">Tùy Chỉnh</span>
-                                        </Dropdown.Toggle>
-
-                                        <Dropdown.Menu >
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <span className="fs-5 text-white">Chọn Màu Nền</span>
-                                                <div style={{ width: "300px" }}>
-                                                    <Select
-                                                        options={backgroundColorData()}
-                                                    />
-                                                </div>
-                                            </div>
-                                        </Dropdown.Menu>
-                                    </Dropdown>
                                 </div>
                                 <div className="right-menu d-flex flex-lg-row align-items-lg-center flex-column mb-lg-0 mb-2">
                                     <div className="me-3 mb-2 mb-lg-0" style={{ width: "250px" }}>

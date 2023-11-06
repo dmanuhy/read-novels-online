@@ -1,0 +1,51 @@
+.novel-detail-body {
+    background-color: #f4f4f4;
+    background-image: linear-gradient(#d2d2d2, #f4f4f4);
+
+    .left-content {
+        .title {
+            border-bottom: solid 1px;
+        }
+
+        .novel-detail {
+            .left-side {
+                .novel-image {
+                    img {
+                        width: 250px;
+                    }
+
+                }
+
+                .genres {
+                    a:hover {
+                        text-decoration: underline !important;
+                    }
+                }
+
+                .novel-author {
+                    .author-name:hover {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+
+            .right-side {
+                .novel-name {
+                    color: #14425d;
+
+                    span {
+                        padding: 2px 5px 2px 5px;
+                    }
+                }
+            }
+        }
+
+        .chapters {
+            a:hover {
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+    .right-content {}
+}

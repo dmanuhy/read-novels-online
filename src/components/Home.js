@@ -17,19 +17,16 @@ const Home = () => {
         axios.get(`/novels`)
             .then(res => {
                 setNovels(res.data)
-                console.log(res.data)
             })
             .catch(err => console.error(err));
         axios.get(`/genres`)
             .then(res => {
                 setGenres(res.data)
-                console.log(res.data)
             })
             .catch(err => console.error(err));
         axios.get(`/novelGenre`)
             .then(res => {
                 setNovelsGenre(res.data)
-                console.log(res.data)
             })
             .catch(err => console.log(err))
     }, [])
@@ -75,9 +72,9 @@ const Home = () => {
                                                 {
                                                     novelsGenre.filter((novel) => novel.novelId === item.id).map((novelGenre) => {
                                                         return (
-                                                            <>
-                                                                [<Link to={`/genres/${novelGenre.genreId}`} key={novelGenre.genreId} className=' text-decoration-none text-dark'>{genres.find((genre) => genre.id === novelGenre.genreId).name}</Link>]<span> </span>
-                                                            </>
+                                                            <span key={novelGenre.genreId}>
+                                                                [ <Link to={`/genres/${novelGenre.genreId}`} className=' text-decoration-none text-dark'>{genres.find((genre) => genre.id === novelGenre.genreId).name}</Link>]<span> </span>
+                                                            </span>
                                                         )
                                                     })
                                                 }
