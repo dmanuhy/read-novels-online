@@ -67,15 +67,6 @@ const Header = () => {
         return result;
     }
 
-    const backgroundColorData = () => {
-        let data = [
-            { label: "Mặc Định", value: "#f4f4f4" },
-            { label: "Đen", value: "black" },
-            { label: "Trắng", value: "white" },
-        ];
-        return data
-    }
-
     return (
         <>
             <div className="home-header">
@@ -114,6 +105,11 @@ const Header = () => {
                                             </div>
                                         </Dropdown.Menu>
                                     </Dropdown>
+                                    {JSON.parse(localStorage.getItem("user")) && JSON.parse(localStorage.getItem("user")).id === 2 &&
+                                        <span className="manage-novel">
+                                            <Link to={`/editor/novels`} className="text-decoration-none text-white">Quản lí truyện</Link>
+                                        </span>
+                                    }
                                 </div>
                                 <div className="right-menu d-flex flex-lg-row align-items-lg-center flex-column mb-lg-0 mb-2">
                                     <div className="me-3 mb-2 mb-lg-0" style={{ width: "250px" }}>
@@ -147,6 +143,7 @@ const Header = () => {
                                             <img
                                                 src="https://truyenchu.vn/img/50.webp"
                                                 style={{ borderRadius: "50%", height: "20px" }}
+                                                alt="avatar"
                                             />
                                             <p
                                                 style={{

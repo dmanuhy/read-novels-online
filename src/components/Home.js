@@ -1,17 +1,20 @@
-
+import Pagination from "./Pagination/Pagination";
 import GenreList from './GenreList';
 import "../assets/css/Home.scss"
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import moment from 'moment/moment';
 import "moment/locale/vi";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const PAGE_SIZE = 10;
+
 const Home = () => {
     const [genres, setGenres] = useState([]);
     const [novels, setNovels] = useState([]);
     const [novelsGenre, setNovelsGenre] = useState([])
+    const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
         axios.get(`/novels`)
@@ -30,6 +33,14 @@ const Home = () => {
             })
             .catch(err => console.log(err))
     }, [])
+
+    const currentTableData = useMemo(() => {
+        const firstPageIndex = (currentPage - 1) * PAGE_SIZE;
+        const lastPageIndex = firstPageIndex + PAGE_SIZE;
+        return novels.sort((a, b) => {
+            return -a.chapters[a.chapters.length - 1].uploadedDate.localeCompare(b.chapters[b.chapters.length - 1].uploadedDate)
+        }).slice(firstPageIndex, lastPageIndex);
+    }, [currentPage, novels]);
 
 
     return (
@@ -62,9 +73,7 @@ const Home = () => {
                         <div className="text-start col-12 col-lg-9">
                             <div className="title text-uppercase">Truyện Mới Cập Nhật</div>
                             {
-                                novels.sort((a, b) => {
-                                    return -a.chapters[a.chapters.length - 1].uploadedDate.localeCompare(b.chapters[b.chapters.length - 1].uploadedDate)
-                                }).slice(0, 10).map((item, index) => {
+                                currentTableData.map((item, index) => {
                                     return (
                                         <div className="new-novel row" key={index}>
                                             <Link to={`/novels/${item.id}`} className="new-novel-name text-decoration-none text-dark col-9 col-lg-5">{item.name}</Link>
@@ -73,7 +82,7 @@ const Home = () => {
                                                     novelsGenre.filter((novel) => novel.novelId === item.id).map((novelGenre) => {
                                                         return (
                                                             <span key={novelGenre.genreId}>
-                                                                [ <Link to={`/genres/${novelGenre.genreId}`} className=' text-decoration-none text-dark'>{genres.find((genre) => genre.id === novelGenre.genreId).name}</Link>]<span> </span>
+                                                                [<Link to={`/genres/${novelGenre.genreId}`} className=' text-decoration-none text-dark'>{genres.find((genre) => genre.id === novelGenre.genreId).name}</Link>]<span> </span>
                                                             </span>
                                                         )
                                                     })
@@ -85,6 +94,15 @@ const Home = () => {
                                     )
                                 })
                             }
+                            <div className="d-flex justify-content-center mt-2">
+                                <Pagination
+                                    className="pagination-bar"
+                                    currentPage={currentPage}
+                                    totalCount={novels.length}
+                                    pageSize={PAGE_SIZE}
+                                    onPageChange={page => setCurrentPage(page)}
+                                />
+                            </div>
                         </div>
                         <div className="col-12 col-lg-3 ps-3 d-none d-lg-block">
                             <GenreList genres={genres} />

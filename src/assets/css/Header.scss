@@ -49,10 +49,21 @@
                         }
                     }
                 }
+
+                .manage-novel {
+                    padding: 14px 0;
+
+                    a {
+                        padding: 17px;
+                    }
+
+                    a:hover {
+                        background-color: #31708f !important;
+                    }
+                }
             }
 
             .right-menu {
-
                 .select__menu-list::-webkit-scrollbar {
                     display: none;
                 }

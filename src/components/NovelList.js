@@ -7,7 +7,7 @@ import Pagination from "./Pagination/Pagination";
 const PAGE_SIZE = 5;
 
 const NovelList = (props) => {
-    let { novels } = props;
+    let { novels, isEditor } = props;
     const [currentPage, setCurrentPage] = useState(1);
 
     const currentTableData = useMemo(() => {
@@ -20,7 +20,9 @@ const NovelList = (props) => {
             <div className="novel-list">
                 {
                     currentTableData && currentTableData.length > 0 ?
-                        currentTableData.map((item, index) => {
+                        currentTableData.sort((a, b) => {
+                            return -a.chapters[a.chapters.length - 1].uploadedDate.localeCompare(b.chapters[b.chapters.length - 1].uploadedDate)
+                        }).map((item, index) => {
                             return (
                                 <div className="novel row py-1" key={index}>
                                     <div className="novel-image col-4 col-md-3">
@@ -41,6 +43,12 @@ const NovelList = (props) => {
                                             <span>Chương Mới Nhất: </span>
                                             <Link to={`/novels/${item.id}/chapters/${item.chapters[item.chapters.length - 1].id}`} className="chapter-link text-decoration-none">Chương {item.chapters[item.chapters.length - 1].id}</Link>
                                         </div>
+                                        {
+                                            isEditor && isEditor === true &&
+                                            <div>
+                                                <Link to={`/editor/novels/${item.id}/chapters/create`} className="btn btn-success">Thêm Chương</Link>
+                                            </div>
+                                        }
                                     </div>
                                 </div>
                             )
