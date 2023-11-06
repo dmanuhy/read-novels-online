@@ -153,6 +153,7 @@ const Header = () => {
                                                 <img
                                                     src="https://truyenchu.vn/img/50.webp"
                                                     style={{ borderRadius: "50%", height: "20px" }}
+                                                    alt="avatar"
                                                 />
                                                 <p
                                                     style={{

@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function AuthenticationForm({
   show,
@@ -10,6 +11,8 @@ function AuthenticationForm({
   status = "login",
   setStatus,
 }) {
+
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -31,8 +34,12 @@ function AuthenticationForm({
       )
       .then((response) => {
         if (response?.data && response?.data.length) {
+          console.log()
           alert("Login successful");
           localStorage.setItem("user", JSON.stringify(response?.data[0]));
+          if (response?.data[0].roleId === 2) {
+            navigate(`editor/novels`)
+          }
           window.location.reload();
         } else {
           alert("Check your username and password. Then try again.");
@@ -71,20 +78,20 @@ function AuthenticationForm({
       <Modal.Body style={{ padding: "1rem 3rem" }}>
         {status === "login" ? (
           <>
-            <Form.Label htmlFor="inputPassword5">Email</Form.Label>
+            <Form.Label htmlFor="inputPassword5">Tên đăng nhập</Form.Label>
             <Form.Control
               type="text"
               id="inputPassword5"
               aria-describedby="passwordHelpBlock"
               value={formData.username}
-              placeholder="Email"
+              placeholder="Nhập tên đăng nhập"
               style={{ borderRadius: "9999px" }}
               onChange={(e) => {
                 setFormData({ ...formData, username: e.target.value });
               }}
             />
             <Form.Label htmlFor="inputPassword5" className="mt-2">
-              Password
+              Mật khẩu
             </Form.Label>
             <Form.Control
               type="password"
@@ -112,20 +119,20 @@ function AuthenticationForm({
                 setFormRegister({ ...formRegister, name: e.target.value });
               }}
             />
-            <Form.Label htmlFor="inputPassword5">Username</Form.Label>
+            <Form.Label htmlFor="inputPassword5">Tên đăng nhập</Form.Label>
             <Form.Control
               type="text"
               id="inputPassword5"
               aria-describedby="passwordHelpBlock"
               value={formRegister.username}
-              placeholder="Username"
+              placeholder="Nhập tên người dùng"
               style={{ borderRadius: "9999px" }}
               onChange={(e) => {
                 setFormRegister({ ...formRegister, username: e.target.value });
               }}
             />
             <Form.Label htmlFor="inputPassword5" className="mt-2">
-              Password
+              Mật khẩu
             </Form.Label>
             <Form.Control
               type="password"
