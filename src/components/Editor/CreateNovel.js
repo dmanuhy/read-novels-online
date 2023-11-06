@@ -2,10 +2,12 @@ import { Editor } from 'primereact/editor';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useNavigate } from 'react-router-dom';
 
 const CreateNovel = () => {
 
-    const editorId = "2";
+    const navigate = useNavigate()
+
     const [novelName, setNovelName] = useState("")
     const [author, setAuthor] = useState("")
     const [chapterTitle, setChapterTitle] = useState("")
@@ -14,12 +16,22 @@ const CreateNovel = () => {
     const [imageBase64, setImageBase64] = useState("")
     const [chosenGenres, setChosenGenres] = useState([])
     const [genres, setGenres] = useState([])
+    const [editor, setEditor] = useState({})
 
     useEffect(() => {
+        if (localStorage.getItem("user")) {
+            setEditor(JSON.parse(localStorage.getItem("user")));
+        }
         axios.get(`/genres?_sort=name`)
             .then(res => setGenres(res.data))
             .catch(err => console.error(err));
     }, [])
+
+    const checkAuthorization = () => {
+        if (editor === null || editor.id !== 2) {
+            navigate("/access-denied");
+        }
+    }
 
     const renderEditorHeader = () => {
         return (
@@ -90,10 +102,9 @@ const CreateNovel = () => {
                                 chapters: chapter,
                                 isHot: false,
                                 isFinished: false,
-                                editorId: editorId
+                                editorId: editor.id
                             })
                                 .then(res => {
-                                    console.log(res.data.id)
                                     insertNewNovelGenres(res.data.id)
                                 })
                                 .catch(err => console.error(err))
@@ -124,6 +135,9 @@ const CreateNovel = () => {
 
     return (
         <>
+            {
+                checkAuthorization()
+            }
             <div className="border p-5 mb-5">
                 <div className='row'>
                     <div className='col-12 col-md-5 d-flex flex-column gap-5'>

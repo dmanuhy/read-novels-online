@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBook, faFire, faGear, faList, faPencil, faUpload } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faBook, faFire, faGear, faList, faPencil, faUpload } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 
-library.add(faBook, faPencil, faList, faGear, faFire, faUpload)
+library.add(faBook, faPencil, faList, faGear, faFire, faUpload, faAngleRight)
 
 axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:9999';
 

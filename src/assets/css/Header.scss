@@ -59,12 +59,12 @@
 
                 .login-btn,
                 .register-btn {
-                    button{
-                        padding: 14px 9px 14px 9px;
+                    button {
+                        padding         : 14px 9px 14px 9px;
                         background-color: #14425d;
-                        border: none;
+                        border          : none;
                     }
-                    
+
                 }
 
 
@@ -84,9 +84,9 @@
 @media screen and (min-width: 992px) {
 
     .login-btn,
-    .register-btn{
-        button:hover{
+    .register-btn {
+        button:hover {
             background-color: #31708f !important;
-        }    
+        }
     }
 }
