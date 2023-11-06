@@ -15,9 +15,9 @@
                 .dropdown {
                     .dropdown-toggle {
                         background-color: #14425d;
-                        border          : none;
-                        border-radius   : 0%;
-                        margin          : 0;
+                        border: none;
+                        border-radius: 0%;
+                        margin: 0;
                     }
 
                     .dropdown-hover {
@@ -30,13 +30,13 @@
                     }
 
                     .dropdown-menu {
-                        margin-top             : 0px;
-                        margin-left            : -0.05rem;
-                        background-color       : #31708f;
-                        border-top-left-radius : 0%;
+                        margin-top: 0px;
+                        margin-left: -0.05rem;
+                        background-color: #31708f;
+                        border-top-left-radius: 0%;
                         border-top-right-radius: 0%;
-                        width                  : 600px;
-                        padding                : 10px;
+                        width: 600px;
+                        padding: 10px;
 
                         .genre-list {
                             .genre-item {
@@ -59,14 +59,22 @@
 
                 .login-btn,
                 .register-btn {
-                    button{
+                    button {
                         padding: 14px 9px 14px 9px;
                         background-color: #14425d;
                         border: none;
                     }
-                    
+
                 }
 
+                .checkout-btn {
+                    button {
+                        padding: 10px 9px 10px 9px;
+                        background-color: #4ba0d1;
+                        border: none;
+                    }
+
+                }
 
             }
         }
@@ -74,19 +82,20 @@
 }
 
 .header-introduction {
-    white-space     : nowrap;
+    white-space: nowrap;
     background-color: #fff !important;
-    height          : 30px;
-    overflow        : hidden;
-    text-overflow   : ellipsis;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @media screen and (min-width: 992px) {
 
     .login-btn,
-    .register-btn{
-        button:hover{
+    .register-btn,
+    .checkout-btn {
+        button:hover {
             background-color: #31708f !important;
-        }    
+        }
     }
 }

@@ -9,7 +9,7 @@ import Select from "react-select";
 import axios from "axios";
 import AuthenticationForm from "./AuthenticationForm";
 const Header = () => {
-
+    const navigator = useNavigate()
     const [genres, setGenres] = useState([]);
     const [novels, setNovels] = useState([]);
     const [selectedOption, setSelectedOption] = useState(null);
@@ -26,6 +26,14 @@ const Header = () => {
     const handleShowRegistered = () => {
         setStatus("register");
         setShow(true);
+    };
+    const handleLogout = () => {
+        let userData = localStorage.getItem("user")
+        if (userData) {
+            localStorage.removeItem("user")
+            navigator("/")
+            window.location.reload()
+        }
     };
 
     const navigate = useNavigate()
@@ -161,22 +169,29 @@ const Header = () => {
                                             </div>
                                         </>
                                     ) : (
-                                        <div className="d-flex align-items-center">
-                                            <img
-                                                src="https://truyenchu.vn/img/50.webp"
-                                                style={{ borderRadius: "50%", height: "20px" }}
-                                            />
-                                            <p
-                                                style={{
-                                                    color: "#f2f2f2",
-                                                    padding: 0,
-                                                    margin: 0,
-                                                    marginLeft: "10px",
-                                                }}
-                                            >
-                                                {userData?.name}
-                                            </p>
-                                        </div>
+                                        <>
+                                            <div className="d-flex align-items-center">
+                                                <img
+                                                    src="https://truyenchu.vn/img/50.webp"
+                                                    style={{ borderRadius: "50%", height: "20px" }}
+                                                />
+                                                <p
+                                                    style={{
+                                                        color: "#f2f2f2",
+                                                        padding: 0,
+                                                        margin: 0,
+                                                        marginLeft: "10px",
+                                                    }}
+                                                >
+                                                    {userData?.name}
+
+                                                </p>
+                                            </div>
+                                            <div className="checkout-btn ms-2">
+                                                <button className="text-decoration-none text-white dropdown-hover" onClick={handleLogout}>Logout</button>
+                                            </div>
+                                        </>
+
                                     )}
 
                                 </div>
