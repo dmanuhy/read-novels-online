@@ -7,5 +7,5 @@ export {
     Header,
     Home,
     Footer,
-    NovelsByGenre
+    NovelsByGenre,
 }

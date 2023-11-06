@@ -6,6 +6,7 @@ import axios from 'axios';
 import moment from 'moment/moment';
 import "moment/locale/vi";
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Home = () => {
     const [genres, setGenres] = useState([]);
@@ -14,25 +15,35 @@ const Home = () => {
 
     useEffect(() => {
         axios.get(`/novels`)
-            .then(res => setNovels(res.data))
+            .then(res => {
+                setNovels(res.data)
+                console.log(res.data)
+            })
             .catch(err => console.error(err));
         axios.get(`/genres`)
-            .then(res => setGenres(res.data))
+            .then(res => {
+                setGenres(res.data)
+                console.log(res.data)
+            })
             .catch(err => console.error(err));
         axios.get(`/novelGenre`)
-            .then(res => setNovelsGenre(res.data))
+            .then(res => {
+                setNovelsGenre(res.data)
+                console.log(res.data)
+            })
             .catch(err => console.log(err))
     }, [])
-    useEffect(() => {
 
-    }, [])
 
     return (
         <>
             <div className="home-body py-4">
                 <div className="container home-container">
                     <div className="home-section row g-3 text-center mb-5">
-                        <div className="title text-start text-uppercase col-12">Truyện HOT</div>
+                        <div className="title text-start text-uppercase col-12">
+                            <span>Truyện HOT </span>
+                            <FontAwesomeIcon icon="fa-solid fa-fire" />
+                        </div>
                         {
                             novels.filter(novel => novel.isHot === true).slice(0, 12).map((item, index) => {
                                 return (
@@ -65,7 +76,7 @@ const Home = () => {
                                                     novelsGenre.filter((novel) => novel.novelId === item.id).map((novelGenre) => {
                                                         return (
                                                             <>
-                                                                [<Link to={`/genres/${novelGenre.genreId}`} className=' text-decoration-none text-dark'>{genres.find((genre) => genre.id === novelGenre.genreId).name}</Link>]<span> </span>
+                                                                [<Link to={`/genres/${novelGenre.genreId}`} key={novelGenre.genreId} className=' text-decoration-none text-dark'>{genres.find((genre) => genre.id === novelGenre.genreId).name}</Link>]<span> </span>
                                                             </>
                                                         )
                                                     })

@@ -13,6 +13,7 @@ const Header = () => {
     const [genres, setGenres] = useState([]);
     const [novels, setNovels] = useState([]);
     const [selectedOption, setSelectedOption] = useState(null);
+    const [searchKey, setSearchKey] = useState("");
 
     const navigate = useNavigate()
 
@@ -31,7 +32,7 @@ const Header = () => {
             setSelectedOption(null)
             navigate(`/novels/${novelId}`);
         }
-    }, [selectedOption])
+    }, [selectedOption, navigate])
 
     const buildSearchData = (inputData) => {
         let result = [];
@@ -45,6 +46,16 @@ const Header = () => {
         }
         return result;
     }
+
+    const backgroundColorData = () => {
+        let data = [
+            { label: "Mặc Định", value: "#f4f4f4" },
+            { label: "Đen", value: "black" },
+            { label: "Trắng", value: "white" },
+        ];
+        return data
+    }
+
     return (
         <>
             <div className="home-header">
@@ -85,21 +96,12 @@ const Header = () => {
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu >
-                                            <div className="genre-list row px-2">
-                                                <div className="genre-item col-3">
-                                                    <a className="text-decoration-none text-white" href="/">Bách Hợp</a>
-                                                </div>
-                                                <div className="genre-item col-3">
-                                                    <a className="text-decoration-none text-white" href="/">Bách Hợp</a>
-                                                </div>
-                                                <div className="genre-item col-3">
-                                                    <a className="text-decoration-none text-white" href="/">Bách Hợp</a>
-                                                </div>
-                                                <div className="genre-item col-3">
-                                                    <a className="text-decoration-none text-white" href="/">Bách Hợp</a>
-                                                </div>
-                                                <div className="genre-item col-3">
-                                                    <a className="text-decoration-none text-white" href="/">Bách Hợp</a>
+                                            <div className="d-flex justify-content-between align-items-center">
+                                                <span className="fs-5 text-white">Chọn Màu Nền</span>
+                                                <div style={{ width: "300px" }}>
+                                                    <Select
+                                                        options={backgroundColorData()}
+                                                    />
                                                 </div>
                                             </div>
                                         </Dropdown.Menu>
@@ -109,17 +111,25 @@ const Header = () => {
                                     <div className="me-3 mb-2 mb-lg-0" style={{ width: "250px" }}>
                                         <Select
                                             placeholder="Tìm truyện..."
-                                            styles={{ width: "200px" }}
                                             defaultValue={selectedOption}
                                             onChange={setSelectedOption}
+                                            onInputChange={value => {
+                                                setSearchKey(value)
+                                            }}
+                                            inputValue={searchKey}
                                             options={buildSearchData(novels)}
+                                            noOptionsMessage={() => "Không tìm thấy truyện"}
+                                            onKeyDown={e => {
+                                                if (e.keyCode === 32 && searchKey === "") e.preventDefault();
+                                            }}
+                                            components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
                                         />
                                     </div>
                                     <div className="login-btn">
-                                        <a href="/" className="text-decoration-none text-white dropdown-hover">Đăng nhập</a>
+                                        <Link to={`/login`} className="text-decoration-none text-white dropdown-hover">Đăng nhập</Link>
                                     </div>
                                     <div className="register-btn">
-                                        <a href="/" className="text-decoration-none text-white dropdown-hover">Đăng ký</a>
+                                        <Link to={`/register`} className="text-decoration-none text-white dropdown-hover">Đăng ký</Link>
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +139,7 @@ const Header = () => {
             </div >
 
             <div className="header-introduction container d-flex align-items-center">
-                <span>Đọc truyện online, đọc truyện chữ, truyện full, truyện hay. Tổng hợp đầy đủ và cập nhật liên tục.</span>
+                <span>Đọc truyện - tiểu thuyết online, truyện full, truyện hay. Tổng hợp đầy đủ và cập nhật liên tục.</span>
             </div>
         </>
     )
