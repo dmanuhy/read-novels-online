@@ -13,7 +13,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/genres/:id" element={<NovelsByGenre />} />
           <Route path="/novels/:id" />
-          <Route path="/novels/:novel/chapters/:chapter" element={<ChapterDetails/>} />
+          <Route path="/novels/:novelId/chapters/:chapterId" element={<ChapterDetails/>} />
           <Route path="/editor/novels/create" element={<CreateNovel />} />
         </Routes>
         <Footer />
