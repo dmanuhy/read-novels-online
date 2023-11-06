@@ -7,13 +7,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect } from "react"
 import Select from "react-select";
 import axios from "axios";
-
+import AuthenticationForm from "./AuthenticationForm";
 const Header = () => {
 
     const [genres, setGenres] = useState([]);
     const [novels, setNovels] = useState([]);
     const [selectedOption, setSelectedOption] = useState(null);
     const [searchKey, setSearchKey] = useState("");
+    const [show, setShow] = useState(false);
+    const [userData, setuserData] = useState({});
+    const [status, setStatus] = useState("login");
+    const handleClose = () => setShow(false);
+    const handleShow = () => {
+        setStatus("login");
+        setShow(true);
+    };
+
+    const handleShowRegistered = () => {
+        setStatus("register");
+        setShow(true);
+    };
 
     const navigate = useNavigate()
 
@@ -24,6 +37,13 @@ const Header = () => {
         axios.get(`/novels`)
             .then(res => setNovels(res.data))
             .catch(err => console.error(err));
+        const userData = localStorage.getItem("user");
+        if (userData) {
+            const userDataDecode = JSON.parse(userData);
+            if (userDataDecode) {
+                setuserData(userDataDecode);
+            }
+        }
     }, [])
 
     useEffect(() => {
@@ -59,6 +79,12 @@ const Header = () => {
     return (
         <>
             <div className="home-header">
+                <AuthenticationForm
+                    handleClose={handleClose}
+                    show={show}
+                    status={status}
+                    setStatus={setStatus}
+                />
                 <Navbar expand="lg">
                     <Container>
                         <Navbar.Brand as={Link} to="/">
@@ -125,12 +151,34 @@ const Header = () => {
                                             components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
                                         />
                                     </div>
-                                    <div className="login-btn">
-                                        <Link to={`/login`} className="text-decoration-none text-white dropdown-hover">Đăng nhập</Link>
-                                    </div>
-                                    <div className="register-btn">
-                                        <Link to={`/register`} className="text-decoration-none text-white dropdown-hover">Đăng ký</Link>
-                                    </div>
+                                    {!userData?.name ? (
+                                        <>
+                                            <div className="login-btn">
+                                                <button className="text-decoration-none text-white dropdown-hover" onClick={handleShow}>Đăng nhập</button>
+                                            </div>
+                                            <div className="register-btn">
+                                                <button className="text-decoration-none text-white dropdown-hover" onClick={handleShowRegistered}>Đăng ký</button>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <div className="d-flex align-items-center">
+                                            <img
+                                                src="https://truyenchu.vn/img/50.webp"
+                                                style={{ borderRadius: "50%", height: "20px" }}
+                                            />
+                                            <p
+                                                style={{
+                                                    color: "#f2f2f2",
+                                                    padding: 0,
+                                                    margin: 0,
+                                                    marginLeft: "10px",
+                                                }}
+                                            >
+                                                {userData?.name}
+                                            </p>
+                                        </div>
+                                    )}
+
                                 </div>
                             </div>
                         </Navbar.Collapse>
