@@ -23,16 +23,16 @@ const ChapterDetails = () => {
                 <h5 style={{ color: '#808080' }}>Chương {novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].id}:{novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].title}</h5>
 
             </Row>
-            <Row>
-                <Col><button style={{ marginLeft: '80%', color: 'white', backgroundColor: '#5cb85c', border: 'none' }}>Chương trước</button></Col>
-                <Col> <button style={{ backgroundColor: '#5cb85c', color: 'white', border: 'none' }}>Chương sau</button></Col>
+            <Row style={{margin: '50px'}}>
+                <Col><button className="btn btn-success" style={{ marginLeft: '75%', color: 'white', backgroundColor: '#5cb85c', border: 'none' }}>Chương trước</button></Col>
+                <Col> <button className="btn btn-success" style={{ backgroundColor: '#5cb85c', color: 'white', border: 'none' }}>Chương sau</button></Col>
             </Row>
             <Row>
                 <div className="fs-5" dangerouslySetInnerHTML={{ __html: novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].content }}></div>
             </Row>
-            <Row>
-                <Col><button style={{ marginLeft: '80%', color: 'white', backgroundColor: '#5cb85c', border: 'none' }}>Chương trước</button></Col>
-                <Col> <button style={{ backgroundColor: '#5cb85c', color: 'white', border: 'none' }}>Chương sau</button></Col>
+            <Row style={{margin: '50px'}}>
+                <Col><button className="btn btn-success" style={{ marginLeft: '75%', color: 'white', backgroundColor: '#5cb85c', border: 'none' }}>Chương trước</button></Col>
+                <Col> <button className="btn btn-success" style={{ backgroundColor: '#5cb85c', color: 'white', border: 'none' }}>Chương sau</button></Col>
             </Row>
         </Container>
     );
