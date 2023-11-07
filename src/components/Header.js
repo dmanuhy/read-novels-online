@@ -113,7 +113,7 @@ const Header = () => {
                                             </div>
                                         </Dropdown.Menu>
                                     </Dropdown>
-                                    {JSON.parse(localStorage.getItem("user")) && JSON.parse(localStorage.getItem("user")).id === 2 &&
+                                    {JSON.parse(localStorage.getItem("user")) && JSON.parse(localStorage.getItem("user")).roleId === 2 &&
                                         <span className="manage-novel">
                                             <Link to={`/editor/novels`} className="text-decoration-none text-white">Quản lí truyện</Link>
                                         </span>
@@ -131,8 +131,8 @@ const Header = () => {
                                             inputValue={searchKey}
                                             options={buildSearchData(novels)}
                                             noOptionsMessage={() => "Không tìm thấy truyện"}
-                                            onKeyDown={e => {
-                                                if (e.keyCode === 32 && searchKey === "") e.preventDefault();
+                                            onKeyDown={event => {
+                                                if (event.keyCode === 32 && searchKey === "") event.preventDefault();
                                             }}
                                             components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
                                         />
@@ -171,8 +171,6 @@ const Header = () => {
                                                 <button className="text-decoration-none text-white dropdown-hover" onClick={handleLogout}>Logout</button>
                                             </div>
                                         </>
-
-
                                     )}
 
                                 </div>

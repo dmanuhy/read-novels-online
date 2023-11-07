@@ -19,7 +19,7 @@ export const ManageNovel = () => {
     }, [])
 
     const checkAuthorization = () => {
-        if (editor === null || editor.id !== 2) {
+        if (editor === null || editor.roleId !== 2) {
             navigate("/access-denied");
         }
     }
