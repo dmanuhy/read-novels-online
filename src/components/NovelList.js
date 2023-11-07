@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../assets/css/NovelList.scss"
 import { useState, useMemo } from "react";
 import Pagination from "./Pagination/Pagination";
+import moment from 'moment/moment';
+import "moment/locale/vi";
 
 const PAGE_SIZE = 5;
 
@@ -13,16 +15,16 @@ const NovelList = (props) => {
     const currentTableData = useMemo(() => {
         const firstPageIndex = (currentPage - 1) * PAGE_SIZE;
         const lastPageIndex = firstPageIndex + PAGE_SIZE;
-        return novels.slice(firstPageIndex, lastPageIndex);
+        return novels.sort((a, b) => {
+            return -a.chapters[a.chapters.length - 1].uploadedDate.localeCompare(b.chapters[b.chapters.length - 1].uploadedDate)
+        }).slice(firstPageIndex, lastPageIndex);
     }, [currentPage, novels]);
     return (
         <>
             <div className="novel-list">
                 {
                     currentTableData && currentTableData.length > 0 ?
-                        currentTableData.sort((a, b) => {
-                            return -a.chapters[a.chapters.length - 1].uploadedDate.localeCompare(b.chapters[b.chapters.length - 1].uploadedDate)
-                        }).map((item, index) => {
+                        currentTableData.map((item, index) => {
                             return (
                                 <div className="novel row py-1" key={index}>
                                     <div className="novel-image col-4 col-md-3">
@@ -39,9 +41,15 @@ const NovelList = (props) => {
                                         </div>
                                         <div className="novel-introduction d-none d-md-block" dangerouslySetInnerHTML={{ __html: item.introduction }}>
                                         </div>
-                                        <div className="novel-newest-chapter">
-                                            <span>Chương Mới Nhất: </span>
-                                            <Link to={`/novels/${item.id}/chapters/${item.chapters[item.chapters.length - 1].id}`} className="chapter-link text-decoration-none">Chương {item.chapters[item.chapters.length - 1].id}</Link>
+                                        <div className="novel-newest-chapter d-flex justify-content-between">
+                                            <div>
+                                                <span>Chương Mới Nhất: </span>
+                                                <Link to={`/novels/${item.id}/chapters/${item.chapters[item.chapters.length - 1].id}`} className="chapter-link text-decoration-none">Chương {item.chapters[item.chapters.length - 1].id}</Link>
+                                            </div>
+                                            <div>
+                                                <span>Đăng lên: </span>
+                                                {moment(item.chapters[item.chapters.length - 1].uploadedDate).locale("vi").fromNow()}
+                                            </div>
                                         </div>
                                         {
                                             isEditor && isEditor === true &&

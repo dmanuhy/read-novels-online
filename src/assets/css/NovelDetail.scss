@@ -11,9 +11,8 @@
             .left-side {
                 .novel-image {
                     img {
-                        width: 250px;
+                        width: 150px;
                     }
-
                 }
 
                 .genres {
@@ -48,4 +47,52 @@
     }
 
     .right-content {}
+}
+
+@media screen and (min-width: 992px) {
+    .novel-detail-body {
+        .left-content {
+            .novel-detail {
+                .left-side {
+                    .novel-image {
+                        img {
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .novel-detail-body {
+        .left-content {
+            .novel-detail {
+                .left-side {
+                    .novel-image {
+                        img {
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .novel-detail-body {
+        .left-content {
+            .novel-detail {
+                .left-side {
+                    .novel-image {
+                        img {
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

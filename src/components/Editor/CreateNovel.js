@@ -102,7 +102,7 @@ const CreateNovel = () => {
                                 chapters: chapter,
                                 isHot: false,
                                 isFinished: false,
-                                editorId: editor.id
+                                editorID: editor.id
                             })
                                 .then(res => {
                                     insertNewNovelGenres(res.data.id)

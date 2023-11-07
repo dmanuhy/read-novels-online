@@ -15,26 +15,44 @@ const ChapterDetails = () => {
     }, []);
 
     return (
-        <Container>
-            <Row style={{ textAlign: 'center' }}>
-                <Link to={`/novels/${novels.id}`} className="text-decoration-none">
-                    <h1 style={{ color: '#7FFF00' }}>{novels.name}</h1><br />
-                </Link>
-                <h5 style={{ color: '#808080' }}>Chương {novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].id}:{novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].title}</h5>
+        <div className="py-4" style={{ backgroundColor: "#f4f4f4" }}>
+            <Container>
+                <Row style={{ textAlign: 'center' }}>
+                    <Link to={`/novels/${novels && novels.id}`} className="text-decoration-none">
+                        <h1 className="text-success">{novels &&novels.name}</h1><br />
+                    </Link>
+                    <h4 style={{ color: '#808080' }}>Chương {novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].id}: {novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].title}</h4>
 
-            </Row>
-            <Row style={{margin: '50px'}}>
-                <Col><button className="btn btn-success" style={{ marginLeft: '75%', color: 'white', backgroundColor: '#5cb85c', border: 'none' }}>Chương trước</button></Col>
-                <Col> <button className="btn btn-success" style={{ backgroundColor: '#5cb85c', color: 'white', border: 'none' }}>Chương sau</button></Col>
-            </Row>
-            <Row>
+
+                </Row>
+                <div className="d-flex justify-content-center my-4 gap-4">
+                    {
+                        (parseInt(chapterId) - 1 !== 0) &&
+                        <div><Link to={`/novels/${novels.id}/chapters/${parseInt(chapterId) - 1}`} className="btn btn-success btn-lg">Chương trước</Link></div>
+                    }
+                    {
+                        (novels.chapters && novels.chapters[parseInt(chapterId)]) &&
+                        <div><Link to={`/novels/${novels.id}/chapters/${parseInt(chapterId) + 1}`} className="btn btn-success btn-lg">Chương sau</Link></div>
+                    }
+
+                </div>
+
                 <div className="fs-5" dangerouslySetInnerHTML={{ __html: novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].content }}></div>
-            </Row>
-            <Row style={{margin: '50px'}}>
-                <Col><button className="btn btn-success" style={{ marginLeft: '75%', color: 'white', backgroundColor: '#5cb85c', border: 'none' }}>Chương trước</button></Col>
-                <Col> <button className="btn btn-success" style={{ backgroundColor: '#5cb85c', color: 'white', border: 'none' }}>Chương sau</button></Col>
-            </Row>
-        </Container>
+
+                <div className="d-flex justify-content-center my-4 gap-4">
+                    {
+                        (parseInt(chapterId) - 1 !== 0) &&
+                        <div><Link to={`/novels/${novels.id}/chapters/${parseInt(chapterId) - 1}`} className="btn btn-success btn-lg">Chương trước</Link></div>
+                    }
+                    {
+                        (novels.chapters && novels.chapters[parseInt(chapterId)]) &&
+                        <div><Link to={`/novels/${novels.id}/chapters/${parseInt(chapterId) + 1}`} className="btn btn-success btn-lg">Chương sau</Link></div>
+                    }
+
+                </div>
+            </Container>
+        </div>
+
     );
 };
 

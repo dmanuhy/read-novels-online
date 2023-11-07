@@ -53,7 +53,7 @@ const Home = () => {
                             <FontAwesomeIcon icon="fa-solid fa-fire" />
                         </div>
                         {
-                            novels.filter(novel => novel.isHot === true).slice(0, 12).map((item, index) => {
+                            novels && novels.filter(novel => novel.isHot === true).slice(0, 12).map((item, index) => {
                                 return (
                                     <div className="col-6 col-sm-4 col-md-3 col-lg-2" key={index}>
                                         <Link className="novel position-relative" to={`/novels/${item.id}`}>
@@ -73,7 +73,7 @@ const Home = () => {
                         <div className="text-start col-12 col-lg-9">
                             <div className="title text-uppercase">Truyện Mới Cập Nhật</div>
                             {
-                                currentTableData.map((item, index) => {
+                                currentTableData && currentTableData.map((item, index) => {
                                     return (
                                         <div className="new-novel row" key={index}>
                                             <Link to={`/novels/${item.id}`} className="new-novel-name text-decoration-none text-dark col-9 col-lg-5">{item.name}</Link>
