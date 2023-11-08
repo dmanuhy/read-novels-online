@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import "../assets/css/ChapterDetails.scss"
+
 const ChapterDetails = () => {
 
     const { novelId, chapterId } = useParams()
@@ -19,7 +21,7 @@ const ChapterDetails = () => {
             <Container>
                 <Row style={{ textAlign: 'center' }}>
                     <Link to={`/novels/${novels && novels.id}`} className="text-decoration-none">
-                        <h1 className="text-success">{novels &&novels.name}</h1><br />
+                        <h1 className="text-success">{novels && novels.name}</h1><br />
                     </Link>
                     <h4 style={{ color: '#808080' }}>Chương {novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].id}: {novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].title}</h4>
 
@@ -37,7 +39,7 @@ const ChapterDetails = () => {
 
                 </div>
 
-                <div className="fs-5" dangerouslySetInnerHTML={{ __html: novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].content }}></div>
+                <div className="chapter-content fs-5" dangerouslySetInnerHTML={{ __html: novels.chapters === undefined ? "Loading" : novels.chapters[parseInt(chapterId) - 1].content }}></div>
 
                 <div className="d-flex justify-content-center my-4 gap-4">
                     {
